@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resúmenes — {{ subject }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='lector.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .section-header-row {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px; flex-wrap: wrap; gap: 10px;
+    }
+    .section-header-row .section-title { margin-bottom: 0; }
+
+    .btn-repaso {
+      display: flex; align-items: center; gap: 6px; padding: 9px 20px;
+      background: linear-gradient(135deg,#7c3aed,#9333ea); color: #fff; border: none;
+      border-radius: 22px; font-family: 'DM Sans',sans-serif; font-size: .88rem; font-weight: 700;
+      cursor: pointer; box-shadow: 0 4px 14px rgba(124,58,237,.38); transition: transform .15s, box-shadow .15s;
+    }
+    .btn-repaso:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(124,58,237,.48); }
+
+    .btn-borrar-todos {
+      display: flex; align-items: center; gap: 6px; padding: 9px 18px;
+      background: #fee2e2; color: #ef4444; border: 1px solid #fca5a5;
+      border-radius: 22px; font-family: 'DM Sans',sans-serif; font-size: .85rem; font-weight: 700;
+      cursor: pointer; transition: background .15s;
+    }
+    .btn-borrar-todos:hover { background: #fecaca; }
+
+    .btn-borrar-item {
+      background: none; border: none; color: #fca5a5; cursor: pointer;
+      font-size: 1rem; padding: 2px 6px; border-radius: 6px; flex-shrink: 0;
+      transition: background .12s, color .12s;
+    }
+    .btn-borrar-item:hover { background: #fee2e2; color: #ef4444; }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="/" class="navbar-back">← Volver</a>
+    <a href="/" class="navbar-brand">Mi Plataforma de Estudio</a>
+    <button class="navbar-apagar" onclick="apagarPlataforma()">⏻ Apagar</button>
+  </header>
+
+  <div class="inner-layout">
+    <div class="section-header-row">
+      <h2 class="section-title">🧠 Resúmenes HTML</h2>
+      {% if files %}
+      <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+        <button class="btn-repaso" id="btnRepaso">🧠 Repasar</button>
+        <button class="btn-borrar-todos" onclick="borrarTodos()">🗑 Borrar todos</button>
+      </div>
+      {% endif %}
+    </div>
+
+    {% if files %}
+    <ul class="file-list" id="fileList">
+      {% for f in files %}
+      <li class="file-item" data-filename="{{ f }}">
+        <span class="file-icon">📝</span>
+        <div class="file-info">
+          <a href="/visor-resumen/{{ subject }}/{{ f }}" class="file-link">
+            {{ f | replace('.html','') | replace('.htm','') | replace('_',' ') }}
+          </a>
+        </div>
+        <div class="file-actions">
+          <a href="/visor-resumen/{{ subject }}/{{ f }}" class="btn btn-biblio">📖 Leer</a>
+          <a href="/files/{{ subject }}/{{ f }}" target="_blank" class="btn btn-programa">↗ Original</a>
+          <button class="btn btn-resumen btn-repaso-individual" data-file="{{ f }}">🧠 Repasar</button>
+          <button class="btn-borrar-item" onclick="borrarResumen('{{ f }}', this)" title="Borrar resumen">🗑</button>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <div class="empty-state" id="emptyState">
+      <p>No hay resúmenes HTML en esta materia todavía.</p>
+      <p>Guardá archivos <code>.html</code> en <strong>Desarrollo/{{ subject }}/</strong></p>
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- ── REPASO MODAL ── -->
+  <div class="modal-overlay" id="repasoModal" style="display:none;">
+    <div class="repaso-modal-box">
+      <div class="repaso-header">
+        <h2>Modo Repaso</h2>
+        <p id="repasoSubtitle">{{ subject }}</p>
+        <button class="repaso-close" id="repasoClose">✕</button>
+      </div>
+      <div class="repaso-body">
+        <p class="repaso-label">Elegí el modo:</p>
+        <div class="repaso-options">
+          <button class="repaso-option selected" data-mode="multiple_choice">
+            <span class="repaso-option-icon">🎯</span>
+            <div class="repaso-option-text"><strong>Multiple Choice</strong><span>5 preguntas de opción múltiple</span></div>
+          </button>
+          <button class="repaso-option" data-mode="true_false">
+            <span class="repaso-option-icon">✅</span>
+            <div class="repaso-option-text"><strong>Verdadero / Falso</strong><span>5 afirmaciones para evaluar</span></div>
+          </button>
+          <button class="repaso-option" data-mode="open">
+            <span class="repaso-option-icon">✍️</span>
+            <div class="repaso-option-text"><strong>Preguntas abiertas</strong><span>4 preguntas de desarrollo</span></div>
+          </button>
+        </div>
+        <button class="repaso-start-btn" id="repasoStart">Empezar repaso</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── QUIZ MODAL ── -->
+  <div class="modal-overlay" id="quizModal" style="display:none;">
+    <div class="quiz-modal-box">
+      <div class="quiz-header">
+        <div class="quiz-header-left">
+          <h3 id="quizTitle">Quiz</h3>
+          <div class="quiz-progress-bar-wrap">
+            <div class="quiz-progress-bar" id="quizProgressBar" style="width:0%"></div>
+          </div>
+        </div>
+        <span class="quiz-counter" id="quizCounter">1 / 5</span>
+      </div>
+      <div id="quizBody" class="quiz-body">
+        <div class="quiz-loading"><div class="spinner"></div><p>Generando preguntas con IA…</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const SUBJECT  = "{{ subject }}";
+    let   FILENAME = "";
+  </script>
+
+  {% include '_chat.html' %}
+
+  <script>
+  // ── Borrar individual ──────────────────────────────────────────────
+  async function borrarResumen(filename, btn) {
+    const label = filename.replace(/\.html?$/i,'').replace(/_/g,' ');
+    if (!confirm(`¿Borrar "${label}"?\nEsta acción no se puede deshacer.`)) return;
+    btn.disabled = true;
+    try {
+      const resp = await fetch('/api/borrar-resumen', {
+        method: 'DELETE', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ subject: SUBJECT, filename }),
+      });
+      const data = await resp.json();
+      if (data.ok) {
+        btn.closest('.file-item').remove();
+        if (!document.querySelectorAll('.file-item').length) {
+          document.getElementById('fileList')?.remove();
+          document.querySelector('.inner-layout').insertAdjacentHTML('beforeend',
+            `<div class="empty-state"><p>No hay resúmenes HTML en esta materia todavía.</p></div>`);
+        }
+      } else { alert('Error: ' + data.msg); btn.disabled = false; }
+    } catch(e) { alert('Error de red: ' + e); btn.disabled = false; }
+  }
+
+  // ── Borrar todos ───────────────────────────────────────────────────
+  async function borrarTodos() {
+    const items = document.querySelectorAll('.file-item').length;
+    if (!items) return;
+    if (!confirm(`¿Borrar los ${items} resúmenes de ${SUBJECT}?\nEsta acción no se puede deshacer.`)) return;
+    try {
+      const resp = await fetch('/api/borrar-resumen', {
+        method: 'DELETE', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ subject: SUBJECT, todos: true }),
+      });
+      const data = await resp.json();
+      if (data.ok) {
+        document.getElementById('fileList')?.remove();
+        document.querySelector('.inner-layout').insertAdjacentHTML('beforeend',
+          `<div class="empty-state"><p>No hay resúmenes HTML en esta materia todavía.</p></div>`);
+      } else { alert('Error: ' + data.msg); }
+    } catch(e) { alert('Error de red: ' + e); }
+  }
+
+  // ── Repaso modal ───────────────────────────────────────────────────
+  const repasoModal = document.getElementById("repasoModal");
+  const quizModal   = document.getElementById("quizModal");
+  const quizBody    = document.getElementById("quizBody");
+  let selectedMode = "multiple_choice", questions = [], currentQ = 0, score = 0;
+
+  document.getElementById("btnRepaso")?.addEventListener("click", () => {
+    FILENAME = "";
+    document.querySelector(".repaso-modal-box h2").textContent = "Modo Repaso";
+    document.querySelector("#repasoSubtitle").textContent = SUBJECT;
+    repasoModal.style.display = "flex";
+  });
+
+  document.querySelectorAll(".btn-repaso-individual").forEach(btn => {
+    btn.addEventListener("click", () => {
+      FILENAME = btn.dataset.file;
+      const label = FILENAME.replace(/\.html?$/i,"").replace(/_/g," ");
+      document.querySelector(".repaso-modal-box h2").textContent = "Repasar";
+      document.querySelector("#repasoSubtitle").textContent = label;
+      repasoModal.style.display = "flex";
+    });
+  });
+
+  document.getElementById("repasoClose").addEventListener("click", () => repasoModal.style.display = "none");
+  repasoModal.addEventListener("click", e => { if (e.target === repasoModal) repasoModal.style.display = "none"; });
+
+  document.querySelectorAll(".repaso-option").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".repaso-option").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected"); selectedMode = btn.dataset.mode;
+    });
+  });
+
+  document.getElementById("repasoStart").addEventListener("click", async () => {
+    repasoModal.style.display = "none";
+    quizModal.style.display   = "flex";
+    quizBody.innerHTML = `<div class="quiz-loading"><div class="spinner"></div><p>Generando preguntas con IA…</p></div>`;
+    const n = selectedMode === "open" ? 4 : 5;
+    try {
+      const res  = await fetch("/api/quiz", {
+        method: "POST", headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({ subject: SUBJECT, filename: FILENAME, mode: selectedMode, n }),
+      });
+      const data = await res.json();
+      if (data.error) { showQuizError(data.error); return; }
+      questions = data.questions || [];
+      if (!questions.length) { showQuizError("No se generaron preguntas."); return; }
+      currentQ = 0; score = 0; showQuestion();
+    } catch(e) { showQuizError("Error de red: " + e.message); }
+  });
+
+  function showQuestion() {
+    const q = questions[currentQ], total = questions.length;
+    document.getElementById("quizProgressBar").style.width = Math.round((currentQ/total)*100) + "%";
+    document.getElementById("quizCounter").textContent = `${currentQ+1} / ${total}`;
+    if (q.options?.length) {
+      quizBody.innerHTML = `<p class="quiz-question">${escHtml(q.question)}</p><div class="quiz-options">${q.options.map((o,i)=>`<button class="quiz-opt-btn" data-idx="${i}">${escHtml(o)}</button>`).join("")}</div>`;
+      quizBody.querySelectorAll(".quiz-opt-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const idx = parseInt(btn.dataset.idx);
+          quizBody.querySelectorAll(".quiz-opt-btn").forEach(b => { b.disabled=true; if(parseInt(b.dataset.idx)===q.correct) b.classList.add("correct"); });
+          if (idx !== q.correct) btn.classList.add("wrong"); else score++;
+          const expl = document.createElement("div"); expl.className="quiz-explanation"; expl.textContent=q.explanation||""; quizBody.appendChild(expl);
+          const next = document.createElement("button"); next.className="quiz-next-btn"; next.textContent=currentQ<total-1?"Siguiente →":"Ver resultado"; next.addEventListener("click",nextQuestion); quizBody.appendChild(next);
+        });
+      });
+    } else {
+      quizBody.innerHTML = `<p class="quiz-question">${escHtml(q.question)}</p><p style="font-size:.85rem;color:#6b7280;margin-top:12px">Respondé mentalmente y revisá la explicación.</p><div class="quiz-explanation" style="margin-top:14px">${escHtml(q.explanation||"Sin explicación.")}</div><button class="quiz-next-btn" id="quizNext" style="margin-top:14px">${currentQ<total-1?"Siguiente →":"Ver resultado"}</button>`;
+      score++; document.getElementById("quizNext").addEventListener("click", nextQuestion);
+    }
+  }
+
+  function nextQuestion() { currentQ++; currentQ >= questions.length ? showScore() : showQuestion(); }
+
+  function showScore() {
+    document.getElementById("quizProgressBar").style.width = "100%";
+    const pct=Math.round((score/questions.length)*100), emoji=pct>=80?"🏆":pct>=60?"👍":"📚",
+          msg=pct>=80?"¡Excelente dominio del tema!":pct>=60?"Buen trabajo, seguí practicando.":"Recomendamos repasar el material.";
+    quizBody.innerHTML=`<div class="quiz-score"><div class="quiz-score-emoji">${emoji}</div><h3>Quiz completado</h3><p>${msg}</p><div class="quiz-score-pill">${score} / ${questions.length} correctas (${pct}%)</div><br><button class="quiz-restart-btn" id="quizRestart">🔄 Volver a intentar</button></div>`;
+    document.getElementById("quizRestart").addEventListener("click",()=>{ quizModal.style.display="none"; repasoModal.style.display="flex"; });
+  }
+
+  function showQuizError(msg) { quizBody.innerHTML=`<div class="quiz-score"><p style="color:#ef4444">❌ ${escHtml(msg)}</p></div>`; }
+  function escHtml(str) { return String(str||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+  function apagarPlataforma() {
+    if (confirm("¿Seguro que querés salir y apagar la plataforma?")) {
+      fetch('/apagar').catch(()=>{});
+      document.body.innerHTML="<div style='display:flex;height:100vh;width:100vw;align-items:center;justify-content:center;background:#f1f3f6;font-family:sans-serif;'><h1>Servidor apagado. Ya podés cerrar esta ventana. 👋</h1></div>";
+      setTimeout(()=>window.close(),1500);
+    }
+  }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Configuración — Mi Plataforma IES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+  <style>
+    body{display:flex;flex-direction:column;min-height:100vh;align-items:center;justify-content:center;padding:2rem}
+    .ob-card{background:var(--bg-card,#1e1e2e);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:2.5rem 2rem;width:100%;max-width:480px;box-shadow:0 8px 32px rgba(0,0,0,.3)}
+    .ob-logo{font-size:1.6rem;font-weight:700;color:#fff;margin-bottom:.3rem}
+    .ob-sub{font-size:.9rem;color:#888;margin-bottom:2rem}
+    .ob-field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.2rem}
+    .ob-label{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#aaa;display:flex;align-items:center;gap:.4rem}
+    .ob-badge-opcional{font-size:.65rem;background:rgba(255,255,255,.08);color:#777;border-radius:4px;padding:.1em .4em;font-weight:400;text-transform:none;letter-spacing:0}
+    .ob-input{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:.65rem .9rem;color:#fff;font-family:'DM Sans',sans-serif;font-size:.95rem;outline:none;transition:border .2s;width:100%;box-sizing:border-box}
+    .ob-input:focus{border-color:#4a90e2}
+    .ob-hint{font-size:.75rem;color:#555;font-family:'DM Mono',monospace;line-height:1.4}
+    .ob-hint a{color:#4a90e2;text-decoration:none}
+    .ob-divisor{border:none;border-top:1px solid rgba(255,255,255,.07);margin:1.5rem 0}
+    .ob-btn{width:100%;padding:.75rem;background:#4a90e2;color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.5rem;transition:background .2s}
+    .ob-btn:hover{background:#357abd}
+    .ob-btn:disabled{background:#444;cursor:not-allowed}
+    .ob-error{color:#f87171;font-size:.85rem;margin-top:.8rem;display:none}
+    .ob-ok{color:#4ade80;font-size:.85rem;margin-top:.8rem;display:none}
+    .update-banner{background:#1a3a1a;border:1px solid #4ade80;border-radius:10px;padding:.8rem 1.1rem;margin-bottom:1.5rem;font-size:.85rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .update-banner a{color:#4ade80;font-weight:700;text-decoration:none;white-space:nowrap}
+  </style>
+</head>
+<body>
+  <div class="ob-card">
+
+    {% if update and update.disponible %}
+    <div class="update-banner">
+      🆕 Nueva versión <strong>v{{ update.version }}</strong> disponible
+      <a href="{{ update.url_descarga }}" target="_blank">Descargar →</a>
+    </div>
+    {% endif %}
+
+    <div class="ob-logo">📚 Mi Plataforma IES</div>
+    <div class="ob-sub">Configurá tu campus virtual para comenzar</div>
+
+    <div class="ob-field">
+      <label class="ob-label">URL del Campus</label>
+      <input class="ob-input" id="url" type="url"
+             placeholder="https://servicios.unl.edu.ar/aulavirtual/fiq/"/>
+      <span class="ob-hint">La URL de la página de login de tu facultad</span>
+    </div>
+
+    <div class="ob-field">
+      <label class="ob-label">Usuario</label>
+      <input class="ob-input" id="usuario" type="text"
+             placeholder="tu.usuario" autocomplete="username"/>
+    </div>
+
+    <div class="ob-field">
+      <label class="ob-label">Contraseña</label>
+      <input class="ob-input" id="password" type="password"
+             placeholder="••••••••" autocomplete="current-password"/>
+    </div>
+
+    <hr class="ob-divisor"/>
+
+    <div class="ob-field">
+      <label class="ob-label">
+        Groq API Key
+        <span class="ob-badge-opcional">opcional pero recomendado</span>
+      </label>
+      <input class="ob-input" id="groq_key" type="password" placeholder="gsk_..."/>
+
+      <button type="button" onclick="toggleTutorial()"
+        style="background:none;border:1px solid #4a90e2;color:#4a90e2;border-radius:6px;padding:.35rem .8rem;font-family:'DM Sans',sans-serif;font-size:.8rem;cursor:pointer;margin-top:.3rem;text-align:left;width:fit-content">
+        ❓ ¿Cómo obtengo mi key gratis?
+      </button>
+
+      <div id="tutorial" style="display:none;background:rgba(74,144,226,.07);border:1px solid rgba(74,144,226,.2);border-radius:8px;padding:1rem;margin-top:.6rem;font-size:.83rem;line-height:1.7;color:#ccc">
+        <strong style="color:#4a90e2;display:block;margin-bottom:.6rem">📋 Pasos para obtener tu key gratuita:</strong>
+        <ol style="padding-left:1.2rem;margin:0;display:flex;flex-direction:column;gap:.4rem">
+          <li>Entrá a <a href="https://console.groq.com" target="_blank" style="color:#4a90e2">console.groq.com</a></li>
+          <li>Creá una cuenta gratuita (podés usar Google)</li>
+          <li>En el menú izquierdo hacé clic en <strong style="color:#fff">API Keys</strong></li>
+          <li>Clic en <strong style="color:#fff">Create API Key</strong></li>
+          <li>Copiá la key que empieza con <code style="background:rgba(255,255,255,.08);padding:.1em .3em;border-radius:3px">gsk_</code></li>
+          <li>Pegala en el campo de arriba</li>
+        </ol>
+        <p style="margin-top:.8rem;color:#888;font-size:.78rem">
+          ⚡ Es completamente gratis. No necesitás tarjeta de crédito.
+        </p>
+      </div>
+
+      <span class="ob-hint" style="margin-top:.3rem">
+        Sin key, los resúmenes con IA no estarán disponibles.
+      </span>
+    </div>
+
+    <button class="ob-btn" id="btnGuardar" onclick="guardar()">
+      Guardar y continuar →
+    </button>
+
+    <div class="ob-error" id="msgError"></div>
+    <div class="ob-ok"    id="msgOk">✓ Configuración guardada. Redirigiendo...</div>
+  </div>
+
+  <script>
+  function toggleTutorial() {
+    const t = document.getElementById('tutorial');
+    t.style.display = t.style.display === 'none' ? 'block' : 'none';
+  }
+
+  async function guardar() {
+    const btn  = document.getElementById('btnGuardar');
+    const err  = document.getElementById('msgError');
+    const ok   = document.getElementById('msgOk');
+    const url  = document.getElementById('url').value.trim();
+    const user = document.getElementById('usuario').value.trim();
+    const pw   = document.getElementById('password').value.trim();
+    const gkey = document.getElementById('groq_key').value.trim();
+
+    err.style.display = 'none';
+    ok.style.display  = 'none';
+
+    if (!url || !user || !pw) {
+      err.textContent   = 'URL, usuario y contraseña son obligatorios.';
+      err.style.display = 'block';
+      return;
+    }
+
+    btn.disabled    = true;
+    btn.textContent = 'Guardando...';
+
+    try {
+      const resp = await fetch('/api/guardar-config', {
+        method:  'POST',
+        headers: {'Content-Type': 'application/json'},
+        body:    JSON.stringify({ url_campus: url, usuario: user, password: pw, groq_key: gkey }),
+      });
+      const data = await resp.json();
+      if (data.ok) {
+        ok.style.display = 'block';
+        setTimeout(() => window.location.href = '/', 1200);
+      } else {
+        err.textContent   = data.msg || 'Error desconocido.';
+        err.style.display = 'block';
+        btn.disabled      = false;
+        btn.textContent   = 'Guardar y continuar →';
+      }
+    } catch(e) {
+      err.textContent   = 'Error de conexión con el servidor.';
+      err.style.display = 'block';
+      btn.disabled      = false;
+      btn.textContent   = 'Guardar y continuar →';
+    }
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Enter') guardar(); });
+  </script>
+</body>
+</html>

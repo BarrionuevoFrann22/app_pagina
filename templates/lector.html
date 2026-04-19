@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ filename }} — Mi Plataforma IES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='lector.css') }}" />
+</head>
+<body class="lector-body">
+<header class="navbar">
+  <a href="/bibliografia/{{ subject }}" class="navbar-back">← Volver</a>
+  <a href="/" class="navbar-brand">Mi Plataforma de Estudio</a>
+  <button class="navbar-apagar" onclick="apagarPlataforma()">⏻ Apagar</button>
+</header>
+
+  <div class="reader-layout">
+
+    <!-- ── PDF PANEL (iframe viewer) ── -->
+    <div class="pdf-panel" id="pdfPanel">
+
+      <div class="pdf-meta">
+        <span class="pdf-badge" style="background:{{ color }}1a; color:{{ color }}; border-color:{{ color }}55">
+          {{ subject }}
+        </span>
+        <h1 class="pdf-title">{{ filename | replace('.pdf','') | replace('_',' ') }}</h1>
+        <p class="pdf-subtitle">Documento de estudio</p>
+      </div>
+
+      <!-- Native iframe viewer — works everywhere with no JS rendering -->
+      <div class="pdf-iframe-wrapper">
+        <iframe
+          id="pdfFrame"
+          src="{{ pdf_url }}"
+          title="{{ filename }}"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- Quick-action bar below the PDF -->
+      <div class="pdf-actions-bar">
+        <a href="{{ pdf_url }}" target="_blank" class="pdf-action-btn">
+          ↗ Abrir en nueva pestaña
+        </a>
+
+        <!-- Page range picker -->
+        <div class="page-range-picker" id="pageRangePicker" style="display:none;">
+          <span class="page-range-label">Págs:</span>
+          <input type="number" id="pageFrom" class="page-range-input" value="1" min="1" placeholder="Desde">
+          <span class="page-range-sep">a</span>
+          <input type="number" id="pageTo"   class="page-range-input" min="1" placeholder="Hasta">
+          <span class="page-range-total" id="pageTotal"></span>
+        </div>
+
+        <button class="pdf-action-btn" id="btnGenerarResumen">
+          ✨ Generar Resumen IA
+        </button>
+        <div class="pdf-gen-status" id="genStatus" style="display:none;"></div>
+      </div>
+
+    </div>
+
+    <!-- ── ANNOTATION PANEL ── -->
+    <aside class="ann-panel hidden" id="annPanel">
+      <div class="ann-header">
+        <h2 class="ann-title">Mis Anotaciones</h2>
+        <button class="ann-close" id="annClose">✕</button>
+      </div>
+      <div class="ann-meta-row">
+        <span class="ann-count" id="annCount">0 guardadas</span>
+        <button class="ann-clear-btn" id="annClearAll">🗑 Borrar todas</button>
+      </div>
+      <div class="ann-tabs">
+        <button class="ann-tab active" data-tab="all">Todos</button>
+        <button class="ann-tab" data-tab="highlight">Resaltados</button>
+        <button class="ann-tab" data-tab="comment">Comentarios</button>
+      </div>
+      <div class="ann-list" id="annList">
+        <p class="ann-empty" id="annEmpty">Sin anotaciones en este documento todavía.</p>
+      </div>
+      <!-- Manual annotation entry (since iframe blocks text selection) -->
+      <div class="ann-manual">
+        <textarea class="ann-manual-input" id="annManualText" rows="2"
+          placeholder="Anotación manual…"></textarea>
+        <div class="ann-manual-btns">
+          <button class="ann-manual-btn hl" id="annManualHL">🟡 Resaltar</button>
+          <button class="ann-manual-btn cm" id="annManualCM">💬 Comentar</button>
+        </div>
+      </div>
+    </aside>
+
+  </div><!-- /reader-layout -->
+
+  <!-- COMMENT MODAL -->
+  <div class="modal-overlay" id="commentModal" style="display:none;">
+    <div class="modal-box">
+      <h3 class="modal-title">Agregar comentario</h3>
+      <p class="modal-selected" id="modalSelectedText"></p>
+      <textarea class="modal-textarea" id="commentInput" rows="4"
+        placeholder="Escribí tu comentario…"></textarea>
+      <div class="modal-actions">
+        <button class="modal-cancel" id="modalCancel">Cancelar</button>
+        <button class="modal-save"   id="modalSave">💾 Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPASO MODAL -->
+  <div class="modal-overlay" id="repasoModal" style="display:none;">
+    <div class="repaso-modal-box">
+      <div class="repaso-header">
+        <h2>Modo Repaso</h2>
+        <p>{{ subject }}</p>
+        <button class="repaso-close" id="repasoClose">✕</button>
+      </div>
+      <div class="repaso-body">
+        <p class="repaso-label">Elegí el modo:</p>
+        <div class="repaso-options">
+          <button class="repaso-option selected" data-mode="multiple_choice">
+            <span class="repaso-option-icon">🎯</span>
+            <div class="repaso-option-text">
+              <strong>Multiple Choice</strong>
+              <span>5 preguntas de opción múltiple</span>
+            </div>
+          </button>
+          <button class="repaso-option" data-mode="true_false">
+            <span class="repaso-option-icon">✅</span>
+            <div class="repaso-option-text">
+              <strong>Verdadero / Falso</strong>
+              <span>5 afirmaciones</span>
+            </div>
+          </button>
+          <button class="repaso-option" data-mode="open">
+            <span class="repaso-option-icon">✍️</span>
+            <div class="repaso-option-text">
+              <strong>Preguntas abiertas</strong>
+              <span>4 preguntas de desarrollo</span>
+            </div>
+          </button>
+        </div>
+        <button class="repaso-start-btn" id="repasoStart">Empezar repaso</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUIZ MODAL -->
+  <div class="modal-overlay" id="quizModal" style="display:none;">
+    <div class="quiz-modal-box">
+      <div class="quiz-header">
+        <div class="quiz-header-left">
+          <h3 id="quizTitle">Quiz</h3>
+          <div class="quiz-progress-bar-wrap">
+            <div class="quiz-progress-bar" id="quizProgressBar" style="width:0%"></div>
+          </div>
+        </div>
+        <span class="quiz-counter" id="quizCounter">1 / 5</span>
+      </div>
+      <div id="quizBody" class="quiz-body">
+        <div class="quiz-loading"><div class="spinner"></div><p>Generando…</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAB GROUP -->
+  <div class="fab-group">
+    <button class="fab fab-ann" id="fabAnn">📌 <span class="fab-label">Anotaciones</span></button>
+    <button class="fab fab-study" id="fabStudy">🧠 <span class="fab-label">Estudiar</span></button>
+  </div>
+
+  <!-- Flask → JS -->
+  <script>
+    const SUBJECT  = {{ subject  | tojson }};
+    const FILENAME = {{ filename | tojson }};
+    const PDF_URL  = {{ pdf_url  | tojson }};
+    const COLOR    = {{ color    | tojson }};
+  </script>
+
+  <script src="{{ url_for('static', filename='lector.js') }}"></script>
+  <script src="{{ url_for('static', filename='quiz.js') }}"></script>
+
+  {% include '_chat.html' %}
+<script>
+function apagarPlataforma() {
+  if (confirm("¿Seguro que querés salir y apagar la plataforma?")) {
+    fetch('/apagar').catch(() => {});
+    document.body.innerHTML = "<div style='display:flex;height:100vh;width:100vw;align-items:center;justify-content:center;background:#f1f3f6;font-family:sans-serif;'><h1>Servidor apagado. Ya podés cerrar esta ventana. 👋</h1></div>";
+    setTimeout(() => window.close(), 1500);
+  }
+}
+</script>
+</body>
+</html>

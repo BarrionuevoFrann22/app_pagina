@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bibliografía — {{ subject }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .bulk-toolbar {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .btn-bulk {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .5rem 1.1rem;
+      border: none;
+      border-radius: 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity .15s, transform .12s;
+    }
+    .btn-bulk:hover { opacity: .88; transform: translateY(-1px); }
+    .btn-bulk:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+    .btn-resumir-sel  { background: #7c3aed; color: #fff; display: none; }
+    .btn-resumir-todo { background: #10b981; color: #fff; }
+    .btn-sel-toggle   { background: #f3f4f6; color: #374151; border: 1.5px solid #e5e7eb; }
+
+    .label-unir {
+      display: none;
+      align-items: center;
+      gap: .4rem;
+      font-size: .82rem;
+      color: #6b7280;
+      cursor: pointer;
+      background: #f5f3ff;
+      border: 1px solid #c4b5fd;
+      border-radius: 20px;
+      padding: .4rem .9rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+    }
+
+    .file-checkbox {
+      width: 17px; height: 17px;
+      cursor: pointer; accent-color: #7c3aed;
+      flex-shrink: 0; margin-right: 4px;
+    }
+    .file-item.checked { background: #faf5ff; border-radius: 8px; }
+
+    .bulk-log {
+      display: none;
+      background: #0f172a; border-radius: 10px;
+      padding: .9rem 1.1rem; margin-bottom: 1.2rem;
+      font-family: 'DM Mono', monospace; font-size: .78rem;
+      color: #a3e635; line-height: 1.7;
+      max-height: 180px; overflow-y: auto; white-space: pre-wrap;
+    }
+    .bulk-progress {
+      display: none; align-items: center;
+      gap: .8rem; margin-bottom: .8rem;
+      font-size: .85rem; color: #6b7280;
+    }
+    .bulk-progress-bar-wrap {
+      flex: 1; height: 6px; background: #e5e7eb;
+      border-radius: 3px; overflow: hidden;
+    }
+    .bulk-progress-bar {
+      height: 100%; background: #7c3aed;
+      border-radius: 3px; transition: width .4s ease; width: 0%;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <a href="/" class="navbar-back">← Volver</a>
+    <a href="/" class="navbar-brand">Mi Plataforma de Estudio</a>
+    <button class="navbar-apagar" onclick="apagarPlataforma()">⏻ Apagar</button>
+  </header>
+
+  <div class="inner-layout">
+    <h2 class="section-title">📚 Textos / PDFs</h2>
+
+    {% if files %}
+    <!-- ── Toolbar ── -->
+    <div class="bulk-toolbar">
+      <button class="btn-bulk btn-sel-toggle" onclick="toggleSeleccion()">
+        ☑ Seleccionar
+      </button>
+
+      <button class="btn-bulk btn-resumir-sel" id="btnResumirSel" onclick="resumirSeleccionados()">
+        ✨ Resumir seleccionados (<span id="selCount">0</span>)
+      </button>
+
+      <!-- Aparece solo cuando hay 2+ PDFs seleccionados -->
+      <label class="label-unir" id="labelUnir">
+        <input type="checkbox" id="chkUnir"
+               style="accent-color:#7c3aed;width:15px;height:15px;cursor:pointer"/>
+        🔗 Unir en un solo resumen
+      </label>
+
+      <button class="btn-bulk btn-resumir-todo" id="btnResumirTodo" onclick="resumirTodo()">
+        ✨ Resumir toda la materia
+      </button>
+    </div>
+
+    <!-- ── Progreso ── -->
+    <div class="bulk-progress" id="bulkProgress">
+      <span id="bulkProgressLabel">0 / 0</span>
+      <div class="bulk-progress-bar-wrap">
+        <div class="bulk-progress-bar" id="bulkProgressBar"></div>
+      </div>
+    </div>
+
+    <!-- ── Log ── -->
+    <div class="bulk-log" id="bulkLog"></div>
+
+    <!-- ── Lista ── -->
+    <ul class="file-list" id="fileList">
+      {% for f in files %}
+      <li class="file-item" data-filename="{{ f }}">
+        <input type="checkbox" class="file-checkbox" style="display:none"
+               onchange="onCheckChange(this)" data-file="{{ f }}"/>
+        <span class="file-icon">📄</span>
+        <div class="file-info">
+          <a href="/lector/{{ subject }}/{{ f }}" class="file-link">
+            {{ f | replace('.pdf','') | replace('_',' ') }}
+          </a>
+          <span class="file-name-raw">{{ f }}</span>
+        </div>
+        <div class="file-actions">
+          <a href="/lector/{{ subject }}/{{ f }}" class="btn btn-biblio">Abrir Lector</a>
+          <a href="/files/{{ subject }}/{{ f }}" target="_blank" class="btn btn-programa">Descargar</a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+    <div class="empty-state">
+      <p>No hay archivos PDF en esta materia todavía.</p>
+      <p>Copiá tus PDFs a la carpeta <strong>Desarrollo/{{ subject }}/</strong></p>
+    </div>
+    {% endif %}
+  </div>
+
+  <button class="fab" title="Chat con IA">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+      <path d="M12 2C6.48 2 2 6.03 2 11c0 2.64 1.17 5.02 3.06 6.72L4 22l4.44-1.48A10.15 10.15 0 0 0 12 21c5.52 0 10-4.03 10-9S17.52 2 12 2Zm1 13H7v-2h6v2Zm4-4H7V9h10v2Z"/>
+    </svg>
+    <span class="fab-label">Chat IA</span>
+  </button>
+
+  <script>
+  const SUBJECT   = {{ subject | tojson }};
+  const ALL_FILES = {{ files   | tojson }};
+  let modoSeleccion = false;
+  let _polling      = null;
+
+  function toggleSeleccion() {
+    modoSeleccion = !modoSeleccion;
+    document.querySelectorAll('.file-checkbox').forEach(cb => {
+      cb.style.display = modoSeleccion ? 'inline-block' : 'none';
+      if (!modoSeleccion) cb.checked = false;
+    });
+    document.querySelectorAll('.file-item').forEach(li => li.classList.remove('checked'));
+    document.querySelector('.btn-sel-toggle').textContent = modoSeleccion ? '✕ Cancelar' : '☑ Seleccionar';
+    actualizarContador();
+  }
+
+  function onCheckChange(cb) {
+    cb.closest('.file-item').classList.toggle('checked', cb.checked);
+    actualizarContador();
+  }
+
+  function actualizarContador() {
+    const sel    = document.querySelectorAll('.file-checkbox:checked').length;
+    const btnSel = document.getElementById('btnResumirSel');
+    const lbl    = document.getElementById('labelUnir');
+    document.getElementById('selCount').textContent = sel;
+    const visible = modoSeleccion && sel > 0;
+    // Botón "Resumir seleccionados" — visible si hay al menos 1
+    btnSel.style.display = visible ? 'inline-flex' : 'none';
+    // Label "Unir" — visible solo si hay 2 o más seleccionados
+    lbl.style.display    = (modoSeleccion && sel >= 2) ? 'flex' : 'none';
+  }
+
+  function resumirSeleccionados() {
+    const seleccionados = [...document.querySelectorAll('.file-checkbox:checked')]
+      .map(cb => cb.dataset.file)
+      .filter(f => f.toLowerCase().endsWith('.pdf'));
+    if (!seleccionados.length) { alert('Seleccioná al menos un PDF.'); return; }
+    const unir = document.getElementById('chkUnir')?.checked || false;
+    iniciarBulk(seleccionados, unir);
+  }
+
+  function resumirTodo() {
+    const todos = ALL_FILES.filter(f => f.toLowerCase().endsWith('.pdf'));
+    if (!todos.length) { alert('No hay PDFs en esta materia.'); return; }
+    if (!confirm(`¿Generar resúmenes para los ${todos.length} PDFs de ${SUBJECT}?`)) return;
+    iniciarBulk(todos, false);
+  }
+
+  async function iniciarBulk(filenames, unir = false) {
+    const log      = document.getElementById('bulkLog');
+    const progress = document.getElementById('bulkProgress');
+    const bar      = document.getElementById('bulkProgressBar');
+    const label    = document.getElementById('bulkProgressLabel');
+    const btnTodo  = document.getElementById('btnResumirTodo');
+    const btnSel   = document.getElementById('btnResumirSel');
+
+    log.style.display      = 'block';
+    progress.style.display = 'flex';
+    log.textContent        = unir
+      ? `🔗 Modo: resumen unificado de ${filenames.length} PDFs\n`
+      : `📄 Modo: ${filenames.length} resúmenes individuales\n`;
+    bar.style.width        = '0%';
+    btnTodo.disabled       = true;
+    btnSel.disabled        = true;
+
+    try {
+      const resp = await fetch('/api/generar-resumenes-bulk', {
+        method:  'POST',
+        headers: {'Content-Type': 'application/json'},
+        body:    JSON.stringify({ subject: SUBJECT, filenames, unir }),
+      });
+      const data = await resp.json();
+      if (!data.ok) {
+        log.textContent += `[ERROR] ${data.msg}`;
+        btnTodo.disabled = false; btnSel.disabled = false;
+        return;
+      }
+
+      _polling = setInterval(async () => {
+        const s   = await fetch('/api/bulk-status').then(r => r.json());
+        log.textContent   = s.log.join('\n');
+        log.scrollTop     = log.scrollHeight;
+        const pct = s.total ? Math.round((s.actual / s.total) * 100) : 0;
+        bar.style.width   = pct + '%';
+        label.textContent = `${s.actual} / ${s.total}`;
+
+        if (!s.corriendo) {
+          clearInterval(_polling);
+          btnTodo.disabled = false;
+          btnSel.disabled  = false;
+          bar.style.width  = '100%';
+        }
+      }, 2000);
+
+    } catch(e) {
+      log.textContent  += `[ERROR de red] ${e}`;
+      btnTodo.disabled  = false;
+      btnSel.disabled   = false;
+    }
+  }
+
+  function apagarPlataforma() {
+    if (confirm("¿Seguro que querés salir y apagar la plataforma?")) {
+      fetch('/apagar').catch(() => {});
+      document.body.innerHTML = "<div style='display:flex;height:100vh;width:100vw;align-items:center;justify-content:center;background:#f1f3f6;font-family:sans-serif;'><h1>Servidor apagado. Ya podés cerrar esta ventana. 👋</h1></div>";
+      setTimeout(() => window.close(), 1500);
+    }
+  }
+  </script>
+</body>
+</html>

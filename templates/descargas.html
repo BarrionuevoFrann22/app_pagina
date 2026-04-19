@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Material del Campus — Mi Plataforma de Estudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <style>
+    .desc-layout { max-width: 900px; margin: 2rem auto; padding: 0 1.4rem 4rem; }
+    .desc-titulo { font-size: 1.4rem; font-weight: 700; color: var(--text-primary,#1a1a2e); margin-bottom: 1.5rem; display: flex; align-items: center; gap: .6rem; }
+
+    .btn-actualizar {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #3b82f6; color: #fff; border: none; border-radius: 10px;
+      padding: .55rem 1.3rem; font-family: 'DM Sans',sans-serif; font-size: .9rem; font-weight: 700;
+      cursor: pointer; margin-bottom: 2rem; transition: background .2s, transform .15s;
+      box-shadow: 0 3px 12px rgba(59,130,246,.3);
+    }
+    .btn-actualizar:hover { background: #2563eb; transform: translateY(-1px); }
+    .btn-actualizar:disabled { background: #9ca3af; cursor: not-allowed; transform: none; box-shadow: none; }
+
+    .bot-log {
+      display: none; background: #0f172a; border: 1px solid #1e293b; border-radius: 10px;
+      padding: 1rem 1.2rem; max-height: 200px; overflow-y: auto; margin-bottom: 2rem;
+      font-family: 'DM Mono',monospace; font-size: .78rem; color: #a3e635; line-height: 1.7; white-space: pre-wrap;
+    }
+
+    .materia-bloque { margin-bottom: 1.8rem; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.07); border: 1px solid rgba(0,0,0,.06); }
+    .materia-header { display: flex; align-items: center; gap: .7rem; padding: .75rem 1.1rem; }
+    .materia-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.7); flex-shrink: 0; }
+    .materia-nombre { font-size: .85rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .06em; }
+    .materia-count { font-size: .75rem; color: rgba(255,255,255,.7); font-family: 'DM Mono',monospace; }
+
+    .btn-borrar-materia {
+      margin-left: auto; background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.25);
+      color: #fff; border-radius: 12px; padding: 3px 10px; font-size: .75rem; cursor: pointer;
+      font-family: 'DM Sans',sans-serif; transition: background .15s; flex-shrink: 0;
+    }
+    .btn-borrar-materia:hover { background: rgba(239,68,68,.4); }
+    .btn-borrar-materia:disabled { opacity: .5; cursor: not-allowed; }
+
+    .lista-archivos { list-style: none; padding: 0; margin: 0; background: #fff; }
+    .archivo-item {
+      display: flex; align-items: center; gap: .8rem; padding: .65rem 1.1rem;
+      border-bottom: 1px solid #f3f4f6; background: #fff; transition: background .12s;
+    }
+    .archivo-item:last-child { border-bottom: none; }
+    .archivo-item:hover { background: #f0f4ff; }
+    .archivo-icono { font-size: 1.1rem; flex-shrink: 0; width: 24px; text-align: center; }
+    .archivo-link {
+      color: #1a1a2e; text-decoration: none; font-size: .88rem; font-weight: 500;
+      flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .archivo-link:hover { color: var(--m-color,#3b82f6); text-decoration: underline; }
+    .archivo-meta { font-size: .72rem; color: #9ca3af; font-family: 'DM Mono',monospace; white-space: nowrap; flex-shrink: 0; }
+    .btn-borrar-archivo {
+      background: none; border: none; color: #fca5a5; cursor: pointer; font-size: 1rem;
+      padding: 2px 4px; border-radius: 4px; flex-shrink: 0; transition: background .12s, color .12s;
+    }
+    .btn-borrar-archivo:hover { background: #fee2e2; color: #ef4444; }
+
+    .sin-datos { text-align: center; padding: 4rem 2rem; color: #9ca3af; }
+    .sin-datos p { margin-bottom: .5rem; font-size: .95rem; }
+    .sin-datos code { background: #f3f4f6; padding: .15em .4em; border-radius: 4px; font-family: 'DM Mono',monospace; color: #6b7280; }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="/" class="navbar-back">← Volver</a>
+    <a href="/" class="navbar-brand">Mi Plataforma de Estudio</a>
+    <button class="navbar-apagar" onclick="apagarPlataforma()">⏻ Apagar</button>
+  </header>
+
+  <div class="desc-layout">
+    <h1 class="desc-titulo">📁 Material del Campus</h1>
+
+    <button class="btn-actualizar" id="btnActualizar" onclick="iniciarBot()">
+      🔄 Actualizar Material
+    </button>
+
+    <div class="bot-log" id="botLog"></div>
+
+    {% if not agrupados %}
+      <div class="sin-datos">
+        <p>Aún no hay archivos registrados.</p>
+        <p>Hacé clic en <strong>Actualizar Material</strong> o ejecutá <code>bot_campus.py</code>.</p>
+      </div>
+    {% else %}
+      {% for materia, archivos in agrupados.items() %}
+      {% set color = color_map[materia] %}
+      <section class="materia-bloque" data-materia="{{ materia }}">
+
+        <div class="materia-header" style="background:{{ color }}">
+          <div class="materia-dot"></div>
+          <span class="materia-nombre">{{ materia }}</span>
+          <span class="materia-count">{{ archivos|length }} archivo{{ 's' if archivos|length != 1 else '' }}</span>
+          <button class="btn-borrar-materia" onclick="borrarMateria('{{ materia }}', this)">
+            🗑 Borrar materia
+          </button>
+        </div>
+
+        <ul class="lista-archivos">
+          {% for archivo in archivos %}
+          {% set ext = archivo['nombre_archivo'].split('.')[-1].lower() %}
+          <li class="archivo-item" style="--m-color:{{ color }}">
+            <span class="archivo-icono">
+              {% if ext == 'pdf' %}📄
+              {% elif ext in ['odt','doc','docx'] %}📝
+              {% elif ext in ['ppt','pptx'] %}📊
+              {% elif ext in ['xls','xlsx'] %}📗
+              {% elif ext in ['zip','rar','7z'] %}🗜️
+              {% elif ext == 'odp' %}🎨
+              {% else %}📁{% endif %}
+            </span>
+            <a href="/{{ archivo['ruta_relativa'] }}" target="_blank" class="archivo-link"
+               title="{{ archivo['nombre_archivo'] }}">{{ archivo['nombre_archivo'] }}</a>
+            <span class="archivo-meta">{{ archivo['fecha_descarga'].replace('T',' ') }}</span>
+            <button class="btn-borrar-archivo"
+                    onclick="borrarArchivo('{{ archivo['ruta_relativa'] }}', this)"
+                    title="Borrar archivo">🗑</button>
+          </li>
+          {% endfor %}
+        </ul>
+
+      </section>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <script>
+  let _polling = null;
+
+  async function iniciarBot() {
+    const btn = document.getElementById('btnActualizar');
+    const log = document.getElementById('botLog');
+    btn.disabled = true; btn.textContent = '⏳ Iniciando bot...';
+    log.style.display = 'block'; log.textContent = '';
+    try {
+      const resp = await fetch('/api/actualizar-material', { method: 'POST' });
+      const data = await resp.json();
+      if (!data.ok) {
+        log.textContent = `[ERROR] ${data.msg}`;
+        btn.disabled = false; btn.textContent = '🔄 Actualizar Material'; return;
+      }
+      _polling = setInterval(async () => {
+        const s = await fetch('/api/bot-status').then(r => r.json());
+        log.textContent = s.log.join('\n'); log.scrollTop = log.scrollHeight;
+        if (!s.corriendo) {
+          clearInterval(_polling);
+          btn.disabled = false; btn.textContent = '🔄 Actualizar Material';
+          setTimeout(() => location.reload(), 1500);
+        }
+      }, 2000);
+    } catch(e) {
+      log.textContent = `[ERROR de red] ${e}`;
+      btn.disabled = false; btn.textContent = '🔄 Actualizar Material';
+    }
+  }
+
+  async function borrarArchivo(ruta, btn) {
+    if (!confirm('¿Borrar este archivo?\nEsta acción no se puede deshacer.')) return;
+    btn.disabled = true;
+    try {
+      const resp = await fetch('/api/borrar-descarga', {
+        method: 'DELETE', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ ruta_relativa: ruta }),
+      });
+      const data = await resp.json();
+      if (data.ok) {
+        const item   = btn.closest('.archivo-item');
+        const lista  = item.closest('.lista-archivos');
+        const bloque = item.closest('.materia-bloque');
+        item.remove();
+        if (!lista.querySelectorAll('.archivo-item').length) bloque.remove();
+      } else {
+        alert('Error: ' + data.msg); btn.disabled = false;
+      }
+    } catch(e) { alert('Error de red: ' + e); btn.disabled = false; }
+  }
+
+  async function borrarMateria(materia, btn) {
+    const bloque = btn.closest('.materia-bloque');
+    const n      = bloque.querySelectorAll('.archivo-item').length;
+    if (!confirm(`¿Borrar los ${n} archivos de "${materia}"?\nEsta acción no se puede deshacer.`)) return;
+    btn.disabled = true; btn.textContent = '...';
+    try {
+      const resp = await fetch('/api/borrar-descarga', {
+        method: 'DELETE', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ materia, todos: true }),
+      });
+      const data = await resp.json();
+      if (data.ok) {
+        bloque.remove();
+      } else {
+        alert('Error: ' + data.msg); btn.disabled = false; btn.textContent = '🗑 Borrar materia';
+      }
+    } catch(e) { alert('Error de red: ' + e); btn.disabled = false; btn.textContent = '🗑 Borrar materia'; }
+  }
+
+  function apagarPlataforma() {
+    if (confirm("¿Seguro que querés salir y apagar la plataforma?")) {
+      fetch('/apagar').catch(()=>{});
+      document.body.innerHTML = "<div style='display:flex;height:100vh;width:100vw;align-items:center;justify-content:center;background:#f1f3f6;font-family:sans-serif;'><h1>Servidor apagado. Ya podés cerrar esta ventana. 👋</h1></div>";
+      setTimeout(()=>window.close(), 1500);
+    }
+  }
+  </script>
+
+</body>
+</html>

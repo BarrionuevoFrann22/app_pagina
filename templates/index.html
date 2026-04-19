@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Plataforma IES</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+ <header class="navbar">
+  <a href="/descargas" class="navbar-back">📁 Campus</a>
+  <a href="/" class="navbar-brand">Mi Plataforma de Estudio</a>
+  <span></span>
+</header>
+  {% if update and update.disponible %}
+<div style="background:#1a3a1a;border-bottom:1px solid #4ade80;padding:.6rem 1.5rem;display:flex;align-items:center;justify-content:space-between;font-size:.85rem;gap:1rem">
+  <span>🆕 Nueva versión <strong>v{{ update.version }}</strong> disponible</span>
+  <a href="{{ update.url_descarga }}" target="_blank"
+     style="color:#4ade80;font-weight:700;text-decoration:none;white-space:nowrap">
+    Descargar →
+  </a>
+</div>
+{% endif %}
+
+  <div class="layout">
+    <main class="subjects-grid">
+      {% if subjects %}
+        {% for s in subjects %}
+        <article class="card" style="--card-color: {{ s.color }}">
+          <div class="card-top-bar"></div>
+          <div class="card-header">
+            <h2 class="card-title">{{ s.name }}</h2>
+            <span class="card-badge">{{ s.year }}</span>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <span class="stat-num">{{ s.textos }}</span>
+              <span class="stat-label">TEXTOS</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">{{ s.resumenes }}</span>
+              <span class="stat-label">RESÚMENES</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="/bibliografia/{{ s.name }}" class="btn btn-biblio">
+              <span class="btn-dot biblio-dot"></span> Bibliografía
+            </a>
+            <a href="#" class="btn btn-programa">
+              <span class="btn-dot programa-dot"></span> Programa
+            </a>
+            <a href="/resumenes/{{ s.name }}" class="btn btn-resumen">
+              <span class="btn-dot resumen-dot"></span> Resúmenes
+            </a>
+          </div>
+        </article>
+        {% endfor %}
+      {% else %}
+        <div class="empty-state">
+          <p>📂 No se encontraron materias en la carpeta <strong>Desarrollo/</strong>.</p>
+          <p>Crea subcarpetas con el nombre de cada materia y agrega tus archivos.</p>
+        </div>
+      {% endif %}
+    </main>
+
+    <aside class="sidebar">
+      <div class="agenda-panel">
+        <div class="agenda-header">
+          <h3 class="agenda-title">Mi Agenda</h3>
+          <span class="agenda-month" id="calMonthLabel"></span>
+        </div>
+        <div class="calendar" id="calendar"></div>
+      </div>
+      <div class="upcoming-panel">
+        <h4 class="upcoming-title">Próximos eventos</h4>
+        <p class="upcoming-empty">Sin eventos programados.</p>
+      </div>
+    </aside>
+  </div>
+  {% include '_chat.html' %}
+  <script src="{{ url_for('static', filename='calendar.js') }}"></script>
+<button id="btn-apagar" onclick="apagarPlataforma()" style="position: fixed; bottom: 24px; left: 24px; background: #ef4444; color: white; border: none; padding: 12px 24px; border-radius: 50px; font-weight: bold; font-family: 'DM Sans', sans-serif; cursor: pointer; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4); z-index: 9999; display: flex; align-items: center; gap: 8px; transition: 0.3s;">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+    Salir y Apagar
+  </button>
+
+  <script>
+  function apagarPlataforma() {
+      if(confirm("¿Seguro que querés salir y apagar la plataforma?")) {
+          document.getElementById('btn-apagar').innerHTML = "Apagando...";
+          // Le avisa a app.py que se suicide
+          fetch('/apagar').then(() => {}).catch(() => {});
+          
+          // Cambia toda la pantalla por un mensaje de despedida
+          document.body.innerHTML = "<div style='display:flex; height:100vh; width:100vw; align-items:center; justify-content:center; background:#f1f3f6; font-family:sans-serif;'><h1>Servidor apagado. Ya podés cerrar esta ventana. 👋</h1></div>";
+          
+          // Intenta cerrar la pestaña sola después de 1 segundo
+          setTimeout(() => window.close(), 1500); 
+      }
+  }
+  </script>
+</body>
+</html>
