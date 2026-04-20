@@ -10,7 +10,19 @@ from threading import Timer
 from datetime import datetime
 
 from dotenv import load_dotenv
-load_dotenv()
+
+# ─────────────────────────────────────────────────────────────────────
+# PATH RESOLVER (compatible .exe de PyInstaller) — debe ir ANTES de load_dotenv
+# ─────────────────────────────────────────────────────────────────────
+def _app_base_dir() -> str:
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(sys.executable)
+    return os.path.dirname(os.path.abspath(__file__))
+
+_APP_DIR = _app_base_dir()
+
+# Cargar .env desde la carpeta del .exe (no desde _MEIPASS)
+load_dotenv(os.path.join(_APP_DIR, ".env"))
 
 from flask import Flask, render_template, jsonify, send_from_directory, abort, request, redirect, url_for
 from config_manager import cargar_config, guardar_config, config_completa
@@ -37,8 +49,19 @@ AI_MODEL_NAME = ""
 try:
     from groq import Groq
     _key = os.environ.get("GROQ_API_KEY", "").strip()
+
+    # Fallback: leer key del config.json si no está en .env
     if not _key:
-        print("⚠️  GROQ_API_KEY no encontrada en .env — IA desactivada.")
+        try:
+            _cfg_tmp = cargar_config()
+            if _cfg_tmp and _cfg_tmp.get("groq_key"):
+                _key = _cfg_tmp["groq_key"].strip()
+                print("✅ Usando Groq key del config.json")
+        except Exception:
+            pass
+
+    if not _key:
+        print("⚠️  GROQ_API_KEY no encontrada — IA desactivada.")
     else:
         _client = Groq(api_key=_key)
         for _model in GROQ_CANDIDATES:
@@ -62,7 +85,7 @@ except ImportError:
 except Exception as e:
     print(f"⚠️  Error inicializando Groq: {e}")
 
-# ── PyInstaller path resolver
+# ── PyInstaller resource resolver (templates/static empaquetados en _MEIPASS)
 def resolver_rutas(ruta_relativa):
     try:
         ruta_base = sys._MEIPASS
@@ -99,9 +122,53 @@ if _user_key and not AI_AVAILABLE:
     except Exception as e:
         print(f"⚠️  Key del usuario inválida: {e}")
 
-BASE_DIR         = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Desarrollo")
-ANNOTATIONS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "anotaciones.json")
-AGENDA_FILE      = os.path.join(os.path.dirname(os.path.abspath(__file__)), "agenda.json")
+
+# ── Helper para recargar Groq dinámicamente (tras onboarding sin reiniciar)
+def _reinit_groq() -> tuple[bool, str]:
+    global AI_CLIENT, AI_MODEL_NAME, AI_AVAILABLE
+    try:
+        from groq import Groq
+    except ImportError:
+        return False, "SDK 'groq' no instalado."
+
+    key = os.environ.get("GROQ_API_KEY", "").strip()
+    if not key:
+        cfg = cargar_config()
+        if cfg and cfg.get("groq_key"):
+            key = cfg["groq_key"].strip()
+    if not key:
+        AI_AVAILABLE = False
+        return False, "GROQ_API_KEY vacía."
+
+    try:
+        client = Groq(api_key=key)
+        for model in GROQ_CANDIDATES:
+            try:
+                client.chat.completions.create(
+                    model=model,
+                    messages=[{"role": "user", "content": "ok"}],
+                    max_tokens=5,
+                )
+                AI_CLIENT     = client
+                AI_MODEL_NAME = model
+                AI_AVAILABLE  = True
+                return True, f"Groq activo: {model}"
+            except Exception:
+                continue
+        AI_AVAILABLE = False
+        return False, "Ningún modelo Groq respondió con esa key."
+    except Exception as e:
+        AI_AVAILABLE = False
+        return False, f"Error inicializando Groq: {e}"
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Paths de datos (persisten al lado del .exe, NO en _MEIPASS)
+# ─────────────────────────────────────────────────────────────────────
+BASE_DIR         = os.path.join(_APP_DIR, "Desarrollo")
+ANNOTATIONS_FILE = os.path.join(_APP_DIR, "anotaciones.json")
+AGENDA_FILE      = os.path.join(_APP_DIR, "agenda.json")
+os.makedirs(BASE_DIR, exist_ok=True)
 
 SUBJECT_COLORS = [
     "#f59e0b", "#3b82f6", "#10b981", "#f97316",
@@ -147,8 +214,11 @@ def scan_subjects():
 def load_annotations():
     if not os.path.exists(ANNOTATIONS_FILE):
         return []
-    with open(ANNOTATIONS_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(ANNOTATIONS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return []
 
 
 def save_annotations(data):
@@ -159,8 +229,11 @@ def save_annotations(data):
 def load_agenda():
     if not os.path.exists(AGENDA_FILE):
         return []
-    with open(AGENDA_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(AGENDA_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return []
 
 
 def save_agenda(data):
@@ -216,7 +289,7 @@ def extract_html_text(subject_name, filename=None, max_chars=12000):
 
 def call_ai(prompt: str) -> str:
     if not AI_AVAILABLE or AI_CLIENT is None:
-        return "IA no disponible. Verificá que GROQ_API_KEY esté en .env y que 'groq' esté instalado."
+        return "IA no disponible. Verificá que GROQ_API_KEY esté en .env o en la configuración, y que 'groq' esté instalado."
     try:
         resp = AI_CLIENT.chat.completions.create(
             model=AI_MODEL_NAME,
@@ -448,7 +521,7 @@ def serve_file(filepath):
 
 @app.route("/static/descargas/<path:filepath>")
 def serve_descarga(filepath):
-    base = os.path.join(os.getcwd(), "static", "descargas")
+    base = os.path.join(_APP_DIR, "static", "descargas")
     full = os.path.join(base, filepath)
     if not os.path.isfile(full):
         abort(404)
@@ -867,13 +940,13 @@ def generar_resumenes_bulk():
 
     _bulk_estado["total"] = len(filenames)
 
-    unir = body.get("unir", False)  # ← agregá esta línea después de filenames
+    unir = body.get("unir", False)
 
     def _procesar():
         import pdfplumber as _plumb
         CHUNK = 40
         CMAX  = 4000
-        todas_las_secciones = []   # para el modo unificado
+        todas_las_secciones = []
 
         for i, filename in enumerate(filenames):
             _bulk_estado["actual"] = i + 1
@@ -914,14 +987,12 @@ def generar_resumenes_bulk():
                     continue
 
                 if unir:
-                    # Agregar separador con título del PDF
                     todas_las_secciones.append(
                         f'<div class="resumen-seccion" style="border-top:2px solid #e5e7eb;padding-top:20px;margin-top:20px">'
                         f'<h2 style="color:#7c3aed">📄 {title}</h2></div>'
                     )
                     todas_las_secciones.extend(sections)
                 else:
-                    # Guardar archivo individual
                     intro_block  = '<div class="resumen-guia"><strong>📌 Mini Guía</strong><p>Resumen generado automáticamente.</p></div>'
                     full_html    = build_resumen_html(subject, title, date_str, f"{total_pages} páginas", intro_block, sections)
                     safe_stem    = re.sub(r"[^\w\-]", "_", filename.replace(".pdf", ""))
@@ -934,7 +1005,6 @@ def generar_resumenes_bulk():
             except Exception as e:
                 _bulk_estado["log"].append(f"  [ERROR] {filename}: {e}")
 
-        # Si modo unir → guardar el resumen consolidado al final
         if unir and todas_las_secciones:
             _now         = datetime.now()
             date_str     = f"{_now.day} de {_now.strftime('%B')} de {_now.year}"
@@ -1002,7 +1072,10 @@ def configurar():
         pw   = body.get("password", "").strip()
         if not url or not user or not pw:
             return jsonify({"ok": False, "msg": "Todos los campos son obligatorios"}), 400
-        guardar_config(url, user, pw)
+        try:
+            guardar_config(url, user, pw)
+        except (ValueError, RuntimeError) as e:
+            return jsonify({"ok": False, "msg": str(e)}), 500
         return jsonify({"ok": True})
     return render_template("onboarding.html", update=get_update_info())
 
@@ -1021,8 +1094,19 @@ def guardar_config_api():
     groq_key = body.get("groq_key", "").strip()
     if not url or not user or not pw:
         return jsonify({"ok": False, "msg": "URL, usuario y contraseña son obligatorios"}), 400
-    guardar_config(url, user, pw, groq_key)
-    return jsonify({"ok": True})
+    try:
+        guardar_config(url, user, pw, groq_key)
+    except (ValueError, RuntimeError) as e:
+        return jsonify({"ok": False, "msg": str(e)}), 500
+
+    ok_ia, msg_ia = _reinit_groq()
+    return jsonify({"ok": True, "ia_activa": ok_ia, "ia_msg": msg_ia})
+
+
+@app.route("/api/reload-ia", methods=["POST"])
+def api_reload_ia():
+    ok, msg = _reinit_groq()
+    return jsonify({"ok": ok, "msg": msg, "modelo": AI_MODEL_NAME if ok else ""})
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -1031,7 +1115,7 @@ def guardar_config_api():
 
 @app.route("/descargas")
 def ver_descargas():
-    ruta_json = os.path.join(os.getcwd(), "registro_descargas.json")
+    ruta_json = os.path.join(_APP_DIR, "registro_descargas.json")
     try:
         with open(ruta_json, "r", encoding="utf-8") as f:
             archivos = json.load(f)
@@ -1122,12 +1206,13 @@ def apagar_servidor():
 def abrir_navegador():
     webbrowser.open_new("http://127.0.0.1:5000")
 
+
 @app.route("/api/borrar-resumen", methods=["DELETE"])
 def borrar_resumen():
     body     = request.get_json(force=True) or {}
     subject  = body.get("subject", "").strip()
     filename = body.get("filename", "").strip()
-    todos    = body.get("todos", False)  # True = borrar todos los de la materia
+    todos    = body.get("todos", False)
 
     if not subject:
         return jsonify({"ok": False, "msg": "subject requerido"}), 400
@@ -1162,9 +1247,9 @@ def borrar_descarga():
     body          = request.get_json(force=True) or {}
     ruta_relativa = body.get("ruta_relativa", "").strip()
     materia       = body.get("materia", "").strip()
-    todos         = body.get("todos", False)  # True = borrar toda la materia
+    todos         = body.get("todos", False)
 
-    ruta_json = os.path.join(os.getcwd(), "registro_descargas.json")
+    ruta_json = os.path.join(_APP_DIR, "registro_descargas.json")
 
     def _cargar():
         try:
@@ -1186,24 +1271,21 @@ def borrar_descarga():
         if todos:
             if not materia:
                 return jsonify({"ok": False, "msg": "materia requerida para borrar todos"}), 400
-            # Borrar archivos físicos de la materia
             entradas = [e for e in registro if e.get("materia") == materia]
             for e in entradas:
-                ruta_fisica = os.path.join(os.getcwd(), e["ruta_relativa"].replace("/", os.sep))
+                ruta_fisica = os.path.join(_APP_DIR, e["ruta_relativa"].replace("/", os.sep))
                 if os.path.isfile(ruta_fisica):
                     os.remove(ruta_fisica)
                 borrados += 1
-            # Borrar carpeta si quedó vacía
             if entradas:
-                carpeta = os.path.dirname(os.path.join(os.getcwd(), entradas[0]["ruta_relativa"].replace("/", os.sep)))
+                carpeta = os.path.dirname(os.path.join(_APP_DIR, entradas[0]["ruta_relativa"].replace("/", os.sep)))
                 if os.path.isdir(carpeta) and not os.listdir(carpeta):
                     os.rmdir(carpeta)
-            # Actualizar JSON
             registro = [e for e in registro if e.get("materia") != materia]
         else:
             if not ruta_relativa:
                 return jsonify({"ok": False, "msg": "ruta_relativa requerida"}), 400
-            ruta_fisica = os.path.join(os.getcwd(), ruta_relativa.replace("/", os.sep))
+            ruta_fisica = os.path.join(_APP_DIR, ruta_relativa.replace("/", os.sep))
             if os.path.isfile(ruta_fisica):
                 os.remove(ruta_fisica)
             registro = [e for e in registro if e.get("ruta_relativa") != ruta_relativa]
@@ -1214,6 +1296,7 @@ def borrar_descarga():
         return jsonify({"ok": False, "msg": str(e)}), 500
 
     return jsonify({"ok": True, "borrados": borrados})
+
 
 if __name__ == "__main__":
     Timer(1.5, abrir_navegador).start()

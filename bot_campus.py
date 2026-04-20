@@ -1,59 +1,24 @@
 # bot_campus.py
 import requests
 from bs4 import BeautifulSoup
-import os, re, time, random, json
+import os, re, sys, time, random, json
 from datetime import datetime
 from urllib.parse import urlparse
 
-# ─── CONFIG GLOBAL ─────────────────────────────────────────────────────────────
+# ─── PATH RESOLVER (compatible .exe de PyInstaller) ────────────────────────────
 
-def _cargar_config_campus() -> dict:
-    """Lee config.json generado por el onboarding."""
-    ruta = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
-    try:
-        with open(ruta, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        # Deofuscar password (base64)
-        from base64 import b64decode
-        data["password"] = b64decode(data["password"].encode()).decode()
-        return data
-    except (FileNotFoundError, json.JSONDecodeError, KeyError):
-        raise RuntimeError("config.json no encontrado. Abrí la app y completá el onboarding primero.")
+def _base_dir() -> str:
+    """Carpeta del .exe o del .py — nunca _MEIPASS."""
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(sys.executable)
+    return os.path.dirname(os.path.abspath(__file__))
 
-def _derivar_urls(url_campus: str) -> tuple[str, str, str]:
-    """
-    De la URL que el usuario ingresó (ej: https://x.com/aulavirtual/fiq/login/index.php
-    o https://x.com/aulavirtual/fiq/)
-    deriva: base_url, login_url, dashboard_url
-    """
-    parsed = urlparse(url_campus)
-    path   = parsed.path
+BASE_DIR_APP = _base_dir()
 
-    # Remover /login/index.php o /login/ del final si está
-    base_path = re.sub(r'/login(/index\.php)?$', '', path).rstrip('/')
+# ─── PATHS ABSOLUTOS ───────────────────────────────────────────────────────────
 
-    base_url      = f"{parsed.scheme}://{parsed.netloc}{base_path}"
-    login_url     = f"{base_url}/login/index.php"
-    dashboard_url = f"{base_url}/my/"
-    return base_url, login_url, dashboard_url
-
-
-# Cargar al iniciar el script
-_cfg              = _cargar_config_campus()
-_BASE_URL, LOGIN_URL, DASHBOARD_URL = _derivar_urls(_cfg["url_campus"])
-
-CAMPUS_USER      = _cfg["usuario"]
-CAMPUS_PASS      = _cfg["password"]
-DOMINIO_FACULTAD = urlparse(_BASE_URL).netloc.replace(":", "_")  # safe para carpetas
-
-CARPETA_STATIC   = "Desarrollo"
-REGISTRO_JSON    = "registro_descargas.json"
-
-HEADERS_BASE = {
-    "Origin":     f"{urlparse(_BASE_URL).scheme}://{urlparse(_BASE_URL).netloc}",
-    "Referer":    LOGIN_URL,
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-}
+CARPETA_STATIC = os.path.join(BASE_DIR_APP, "Desarrollo")
+REGISTRO_JSON  = os.path.join(BASE_DIR_APP, "registro_descargas.json")
 
 PATRONES_RECURSO = [
     "/mod/resource/view.php",
@@ -62,7 +27,52 @@ PATRONES_RECURSO = [
     "/pluginfile.php",
 ]
 
-# ... resto del código igual ...
+# ─── VARIABLES GLOBALES (se llenan con _init_campus) ───────────────────────────
+
+_BASE_URL = LOGIN_URL = DASHBOARD_URL = ""
+CAMPUS_USER = CAMPUS_PASS = DOMINIO_FACULTAD = ""
+HEADERS_BASE: dict = {}
+
+# ─── CONFIG GLOBAL ─────────────────────────────────────────────────────────────
+
+def _cargar_config_campus() -> dict:
+    """Lee config.json generado por el onboarding."""
+    ruta = os.path.join(BASE_DIR_APP, "config.json")
+    try:
+        with open(ruta, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        from base64 import b64decode
+        data["password"] = b64decode(data["password"].encode()).decode()
+        return data
+    except (FileNotFoundError, json.JSONDecodeError, KeyError) as e:
+        raise RuntimeError(
+            f"config.json no encontrado o corrupto en: {ruta}. "
+            f"Abrí la app y completá el onboarding primero. ({e})"
+        )
+
+def _derivar_urls(url_campus: str) -> tuple[str, str, str]:
+    parsed    = urlparse(url_campus)
+    base_path = re.sub(r'/login(/index\.php)?/?$', '', parsed.path).rstrip('/')
+    base_url      = f"{parsed.scheme}://{parsed.netloc}{base_path}"
+    login_url     = f"{base_url}/login/index.php"
+    dashboard_url = f"{base_url}/my/"
+    return base_url, login_url, dashboard_url
+
+def _init_campus():
+    """Carga config y arma URLs. Llamar antes de cualquier operación."""
+    global _BASE_URL, LOGIN_URL, DASHBOARD_URL
+    global CAMPUS_USER, CAMPUS_PASS, DOMINIO_FACULTAD, HEADERS_BASE
+
+    cfg = _cargar_config_campus()
+    _BASE_URL, LOGIN_URL, DASHBOARD_URL = _derivar_urls(cfg["url_campus"])
+    CAMPUS_USER      = cfg["usuario"]
+    CAMPUS_PASS      = cfg["password"]
+    DOMINIO_FACULTAD = urlparse(_BASE_URL).netloc.replace(":", "_")
+    HEADERS_BASE = {
+        "Origin":     f"{urlparse(_BASE_URL).scheme}://{urlparse(_BASE_URL).netloc}",
+        "Referer":    LOGIN_URL,
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    }
 
 # ─── HELPERS ───────────────────────────────────────────────────────────────────
 
@@ -75,7 +85,6 @@ def _sanitizar(nombre: str) -> str:
     return re.sub(r'[\\/:*?"<>|]', "_", nombre).strip()
 
 def _fix_encoding(nombre: str) -> str:
-    """Corrige nombres con encoding latin-1 mal interpretado (tildes rotas)."""
     try:
         return nombre.encode('latin-1').decode('utf-8')
     except (UnicodeEncodeError, UnicodeDecodeError):
@@ -107,7 +116,6 @@ def _cargar_registro() -> list:
         return []
 
 def _guardar_registro(registro: list):
-    """Escritura atómica para evitar corrupción si se interrumpe."""
     tmp = REGISTRO_JSON + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(registro, f, ensure_ascii=False, indent=2)
@@ -144,6 +152,8 @@ def get_login_token(session: requests.Session) -> str:
     return token["value"]
 
 def login(username: str, password: str) -> requests.Session:
+    if not LOGIN_URL:
+        _init_campus()
     session = requests.Session()
     token   = get_login_token(session)
     resp    = session.post(
@@ -154,7 +164,7 @@ def login(username: str, password: str) -> requests.Session:
     )
     resp.raise_for_status()
     if "/login/index.php" in resp.url:
-        raise PermissionError("Login fallido")
+        raise PermissionError("Login fallido. Verificá usuario y contraseña.")
     print(f"[OK] Login exitoso → {resp.url}\n")
     return session
 
@@ -231,6 +241,7 @@ def _descargar_archivo(session, url, referer, carpeta_materia, nombre_materia, u
 
 def descargar_archivos(session: requests.Session, materias: dict):
     total_desc = total_omit = 0
+    os.makedirs(CARPETA_STATIC, exist_ok=True)
 
     for nombre_materia, url_materia in materias.items():
         print(f"\n{'='*60}\n[MATERIA] {nombre_materia}\n{'='*60}")
@@ -274,6 +285,7 @@ def descargar_archivos(session: requests.Session, materias: dict):
 
 if __name__ == "__main__":
     try:
+        _init_campus()
         sess     = login(CAMPUS_USER, CAMPUS_PASS)
         materias = obtener_materias(sess)
         if not materias:

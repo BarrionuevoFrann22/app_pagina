@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen — Agregación Vs Composición en diagramas de clases</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'DM Sans',sans-serif;background:#f1f3f6;padding:40px 16px 80px}
+    .resumen-container{max-width:820px;margin:0 auto;background:#fff;border-radius:12px;padding:40px 48px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+    .resumen-header{text-align:center;margin-bottom:32px}
+    .resumen-badge{display:inline-block;background:#ede9fe;color:#7c3aed;border:1.5px solid #c4b5fd;border-radius:20px;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:3px 14px;text-transform:uppercase;margin-bottom:12px}
+    .resumen-titulo{font-size:1.8rem;font-weight:700;margin-bottom:6px}
+    .resumen-meta{font-size:.82rem;color:#9ca3af}
+    .resumen-guia{border-left:4px solid #7c3aed;background:#faf5ff;padding:14px 18px;border-radius:0 8px 8px 0;margin-bottom:28px;font-size:.9rem;line-height:1.6}
+    .resumen-guia strong{color:#7c3aed;display:block;margin-bottom:6px}
+    .resumen-seccion{margin-bottom:28px}
+    .resumen-seccion h2{font-size:1.1rem;font-weight:700;border-left:3px solid #10b981;padding-left:12px;margin-bottom:12px}
+    .resumen-seccion p{line-height:1.7;color:#374151;margin-bottom:10px}
+    .resumen-seccion ul{padding-left:20px;line-height:1.7;color:#374151}
+    .resumen-seccion li{margin-bottom:6px}
+    @media(max-width:600px){.resumen-container{padding:24px 20px}.resumen-titulo{font-size:1.4rem}}
+  </style>
+</head>
+<body><div class="resumen-container">
+  <div class="resumen-header">
+    <span class="resumen-badge">Ingeniería de Software I TM</span>
+    <h1 class="resumen-titulo">Agregación Vs Composición en diagramas de clases</h1>
+    <p class="resumen-meta">Resumen IA · 18 de April de 2026 · Páginas 1–4</p>
+  </div>
+  <div class="resumen-guia">
+    <strong>📌 Mini Guía</strong>
+    <p>Resumen generado automáticamente a partir del texto.</p>
+  </div>
+**Ingeniería de Software I: Agregación y Composición en Diagramas de Clases con UML**
+
+**Introducción**
+
+La ingeniería de software es una disciplina que se enfoca en el diseño, desarrollo y mantenimiento de software de alta calidad. Una de las herramientas fundamentales para la ingeniería de software es el lenguaje de modelado unificado (UML), que permite a los desarrolladores crear diagramas de clases que representen la estructura y la relación entre las clases de un sistema. En este resumen, se explorarán los conceptos clave de agregación y composición en diagramas de clases con UML.
+
+**Conceptos Clave**
+
+### **Agregación**
+
+La agregación es un tipo de asociación que indica que una clase es parte de otra clase. Los componentes pueden ser compartidos por varios compuestos (de la misma asociación de agregación o de varias asociaciones de agregación distintas). La destrucción del compuesto no conlleva la destrucción de los componentes. La agregación se representa en UML mediante un diamante de color blanco colocado en el extremo en el que está la clase que representa el “todo”.
+
+**Ejemplo de Agregación**
+
+* Tenemos una clase Empresa.
+* Tenemos una clase Cliente.
+* Una empresa agrupa a varios clientes.
+
+### **Composición**
+
+La composición es una forma fuerte de composición donde la vida de la clase contenida debe coincidir con la vida de la clase contenedor. Los componentes constituyen una parte del objeto compuesto. De esta forma, los componentes no pueden ser compartidos por varios objetos compuestos. La supresión del objeto compuesto conlleva la supresión de los componentes. El símbolo de composición es un diamante de color negro colocado en el extremo en el que está la clase que representa el “todo” (Compuesto).
+
+**Ejemplo de Composición**
+
+* Tenemos una clase Empresa.
+* Un objeto Empresa está a su vez compuesto por uno o varios objetos del tipo empleado.
+* El tiempo de vida de los objetos Empleado depende del tiempo de vida de Empresa, ya que si no existe una Empresa no pueden existir sus empleados.
+
+### **Diferencias entre Composición y Agregación**
+
+La siguiente tabla resume algunas diferencias entre agregación y composición:
+
+|  | Composición | Agregación |
+| --- | --- | --- |
+| Dependencia | Alta | Baja |
+| Tiempo de vida | Coincide | Independiente |
+| Supresión | Suprime componentes | No suprime componentes |
+| Símbolo | Diamante negro | Diamante blanco |
+
+**Ejemplos**
+
+* Una persona es compuesta por una cabeza, un tórax y piernas. La supresión de la persona conlleva la supresión de sus componentes.
+* Una empresa agrupa a varios clientes. La supresión de la empresa no conlleva la supresión de los clientes.
+
+**Preguntas de Repaso**
+
+1. ¿Cuál es la diferencia principal entre agregación y composición en diagramas de clases con UML?
+2. ¿Cuál es el símbolo de composición en UML?
+3. ¿Cuál es el tipo de relación entre una persona y sus componentes (cabeza, tórax, piernas)?
+
+**Conclusión**
+
+En conclusión, la agregación y la composición son dos conceptos clave en la ingeniería de software que permiten a los desarrolladores representar la estructura y la relación entre las clases de un sistema. La agregación es un tipo de asociación que indica que una clase es parte de otra clase, mientras que la composición es una forma fuerte de composición donde la vida de la clase contenida debe coincidir con la vida de la clase contenedor. La comprensión de estos conceptos es fundamental para la creación de diagramas de clases efectivos y la implementación de sistemas de software de alta calidad.
+</div></body>
+</html>

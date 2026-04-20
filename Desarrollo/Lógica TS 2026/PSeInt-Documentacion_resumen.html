@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen — PSeInt-Documentacion</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#f1f3f6;padding:40px 16px 80px}
+.resumen-container{max-width:820px;margin:0 auto;background:#fff;border-radius:12px;padding:40px 48px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+.resumen-header{text-align:center;margin-bottom:32px}
+.resumen-badge{display:inline-block;background:#ede9fe;color:#7c3aed;border:1.5px solid #c4b5fd;border-radius:20px;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:3px 14px;text-transform:uppercase;margin-bottom:12px}
+.resumen-titulo{font-size:1.8rem;font-weight:700;margin-bottom:6px}
+.resumen-meta{font-size:.82rem;color:#9ca3af}
+.resumen-guia{border-left:4px solid #7c3aed;background:#faf5ff;padding:14px 18px;border-radius:0 8px 8px 0;margin-bottom:28px;font-size:.9rem;line-height:1.6}
+.resumen-guia strong{color:#7c3aed;display:block;margin-bottom:6px}
+.resumen-seccion{margin-bottom:28px}
+.resumen-seccion h2{font-size:1.1rem;font-weight:700;border-left:3px solid #10b981;padding-left:12px;margin-bottom:12px}
+.resumen-seccion p{line-height:1.7;color:#374151;margin-bottom:10px}
+.resumen-seccion ul{padding-left:20px;line-height:1.7;color:#374151}
+.resumen-seccion li{margin-bottom:6px}
+@media(max-width:600px){.resumen-container{padding:24px 20px}.resumen-titulo{font-size:1.4rem}}
+</style>
+</head>
+<body><div class="resumen-container">
+  <div class="resumen-header">
+    <span class="resumen-badge">Lógica TS 2026</span>
+    <h1 class="resumen-titulo">PSeInt-Documentacion</h1>
+    <p class="resumen-meta">Resumen IA · 19 de April de 2026 · 6 páginas</p>
+  </div>
+<div class="resumen-guia"><strong>📌 Mini Guía</strong><p>Resumen generado automáticamente.</p></div>
+<div class="resumen-seccion">
+  <h2>Introducción a la Lógica TS 2026</h2>
+  <p>La Lógica TS 2026 es un lenguaje de programación que se utiliza para desarrollar software de alta calidad. En este resumen, se presentarán los conceptos clave de la lógica y estructura de datos en TS 2026.</p>
+</div>
+
+<div class="resumen-seccion">
+  <h2>Conceptos Clave</h2>
+  <ul>
+    <li><strong>Variables</strong>: Las variables son contenedores que almacenan valores en la memoria. En TS 2026, se pueden definir variables de diferentes tipos, como números enteros, reales, lógicos y caracteres.</li>
+    <li><strong>Expresiones Lógicas</strong>: Las expresiones lógicas se utilizan para evaluar condiciones en la lógica de programación. En TS 2026, se pueden utilizar operadores lógicos como "y", "o" y "no" para crear expresiones lógicas simples y compuestas.</li>
+    <li><strong>Estructuras de Decisión</strong>: Las estructuras de decisión se utilizan para tomar decisiones en la lógica de programación. En TS 2026, se pueden utilizar estructuras de decisión como "Si-Entonces-SiNo" y "Según" para tomar decisiones.</li>
+    <li><strong>Estructuras Repetitivas</strong>: Las estructuras repetitivas se utilizan para repetir acciones en la lógica de programación. En TS 2026, se pueden utilizar estructuras repetitivas como "Para" y "Mientras" para repetir acciones.</li>
+  </ul>
+</div>
+
+<div class="resumen-seccion">
+  <h2>Definir Variables</h2>
+  <p>Para definir una variable en TS 2026, se utiliza la sentencia "DEFINIR <variable> COMO REAL/ENTERO/LOGICO/CARACTER". Por ejemplo:</p>
+  <pre>
+DEFINIR a, b, suma Como Entero
+  </pre>
+</div>
+
+<div class="resumen-seccion">
+  <h2>Mostrar Mensajes por Pantalla</h2>
+  <p>Para mostrar un mensaje por pantalla en TS 2026, se utiliza la sentencia "ESCRIBIR". Por ejemplo:</p>
+  <pre>
+ESCRIBIR "Ingrese un número"
+  </pre>
+</div>
+
+<div class="resumen-seccion">
+  <h2>Ingresar Datos por Teclado</h2>
+  <p>Para ingresar un dato por teclado en TS 2026, se utiliza la sentencia "LEER". Por ejemplo:</p>
+  <pre>
+LEER a;
+  </pre>
+</div>
+
+<div class="resumen-seccion">
+  <h2>Estructuras de Decisión</h2>
+  <p>Las estructuras de decisión se utilizan para tomar decisiones en la lógica de programación. En TS 2026, se pueden utilizar estructuras de decisión como "Si-Entonces-SiNo" y "Según" para tomar decisiones.</p>
+  <ul>
+    <li><strong>Si-Entonces-SiNo</strong>: Esta estructura de decisión se utiliza para tomar decisiones basadas en una condición. Por ejemplo:</li>
+    <pre>
+Si (b > 0) Entonces
+  ESCRIBIR "POSITIVO"
+SiNo
+  Si (b = 0) Entonces
+    ESCRIBIR "EL NUMERO ES CERO"
+  SiNo
+    ESCRIBIR "EL NUMERO ES NEGATIVO"
+  Fin Si
+Fin Si
+  </pre>
+    <li><strong>Según</strong>: Esta estructura de decisión se utiliza para tomar decisiones basadas en una tabla de valores. Por ejemplo:</li>
+    <pre>
+Segun valor Hacer
+  1:
+    resultado = base * 0.15
+    ESCRIBIR "El resultado recibido es de $" resultado
+  2:
+    resultado = base * 0.10
+    ESCRIBIR "El resultado recibido es de $" resultado
+  3:
+    resultado = base * 0.08
+    ESCRIBIR "El resultado recibido es de $" resultado
+  4:
+    resultado = base * 0.07
+    ESCRIBIR "El resultado recibido es de $" resultado
+De Otro Modo:
+  ESCRIBIR "la valor ingresada es erróneo"
+Fin Según
+  </pre>
+</div>
+
+<div class="resumen-seccion">
+  <h2>Estructuras Repetitivas</h2>
+  <p>Las estructuras repetitivas se utilizan para repetir acciones en la lógica de programación. En TS 2026, se pueden utilizar estructuras repetitivas como "Para" y "Mientras" para repetir acciones.</p>
+  <ul>
+    <li><strong>Para</strong>: Esta estructura repetitiva se utiliza para repetir acciones un número determinado de veces. Por ejemplo:</li>
+    <pre>
+Para x=1 Hasta 9 Con Paso 1 Hacer
+  ESCRIBIR "Ingrese otro número.: ";
+  LEER N;
+  Si (N < 100) Entonces
+    suma = suma + N
+  Fin Si
+Fin Para
+  </pre>
+    <li><strong>Mientras</strong>: Esta estructura repetitiva se utiliza para repetir acciones mientras una condición sea verdadera. Por ejemplo:</li>
+    <pre>
+Mientras (n <> 0) Hacer
+  suma = suma + n
+  ESCRIBIR "INGRESE UN NUMERO "
+  LEER n;
+Fin Mientras
+  ESCRIBIR "total suma : " suma;
+  </pre>
+</div>
+
+<div class="resumen-seccion">
+  <h2>🧠 Preguntas de Repaso</h2>
+  <ol>
+    <li>¿Cómo se define una variable en TS 2026?</li>
+    <li>¿Cómo se muestra un mensaje por pantalla en TS 2026?</li>
+    <li>¿Cómo se ingresa un dato por teclado en TS 2026?</li>
+    <li>¿Qué estructuras de decisión se utilizan en TS 2026?</li>
+    <li>¿Qué estructuras repetitivas se utilizan en TS 2026?</li>
+  </ol>
+</div>
+</div></body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen — ESTRUCTURA DE LOS SISTEMAS OPERATIVOS - Profe Jacques</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#f1f3f6;padding:40px 16px 80px}
+.resumen-container{max-width:820px;margin:0 auto;background:#fff;border-radius:12px;padding:40px 48px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+.resumen-header{text-align:center;margin-bottom:32px}
+.resumen-badge{display:inline-block;background:#ede9fe;color:#7c3aed;border:1.5px solid #c4b5fd;border-radius:20px;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:3px 14px;text-transform:uppercase;margin-bottom:12px}
+.resumen-titulo{font-size:1.8rem;font-weight:700;margin-bottom:6px}
+.resumen-meta{font-size:.82rem;color:#9ca3af}
+.resumen-guia{border-left:4px solid #7c3aed;background:#faf5ff;padding:14px 18px;border-radius:0 8px 8px 0;margin-bottom:28px;font-size:.9rem;line-height:1.6}
+.resumen-guia strong{color:#7c3aed;display:block;margin-bottom:6px}
+.resumen-seccion{margin-bottom:28px}
+.resumen-seccion h2{font-size:1.1rem;font-weight:700;border-left:3px solid #10b981;padding-left:12px;margin-bottom:12px}
+.resumen-seccion p{line-height:1.7;color:#374151;margin-bottom:10px}
+.resumen-seccion ul{padding-left:20px;line-height:1.7;color:#374151}
+.resumen-seccion li{margin-bottom:6px}
+@media(max-width:600px){.resumen-container{padding:24px 20px}.resumen-titulo{font-size:1.4rem}}
+</style>
+</head>
+<body><div class="resumen-container">
+  <div class="resumen-header">
+    <span class="resumen-badge">Sistemas Operativos A</span>
+    <h1 class="resumen-titulo">ESTRUCTURA DE LOS SISTEMAS OPERATIVOS - Profe Jacques</h1>
+    <p class="resumen-meta">Resumen IA · 19 de April de 2026 · 7 páginas</p>
+  </div>
+<div class="resumen-guia"><strong>📌 Mini Guía</strong><p>Resumen generado automáticamente.</p></div>
+<div class="resumen-seccion">
+  <h2>🔴 1. SISTEMAS MONOLÍTICOS</h2>
+  <strong>Conceptos clave:</strong>
+  <ul>
+    <li><strong>Todo el sistema operativo funciona como un solo programa gigante.</strong></li>
+    <li><strong>Cada componente del sistema puede llamarse entre sí sin restricciones.</strong></li>
+    <li><strong>Muy difícil de mantener y comprender.</strong></li>
+  </ul>
+  <p>El modelo monolítico es el más clásico y se caracteriza por tener todo el sistema operativo funcionando como un solo programa gigante. Esto significa que cada componente del sistema puede llamarse entre sí sin restricciones, lo que puede ser beneficioso en términos de rendimiento, pero también puede ser un problema en términos de seguridad y mantenimiento.</p>
+  <p>El problema clave del modelo monolítico es que es muy difícil de mantener y comprender. Si falla un componente del sistema, puede afectar a todo el sistema, lo que puede ser devastador. Por ejemplo, si falla un driver, puede colgar toda la PC.</p>
+  <p>En resumen, el modelo monolítico es rápido pero peligroso.</p>
+</div>
+
+<div class="resumen-seccion">
+  <h2>🔵 2. SISTEMAS POR CAPAS</h2>
+  <strong>Conceptos clave:</strong>
+  <ul>
+    <li><strong>El sistema se divide en niveles (capas), cada uno con una función.</strong></li>
+    <li><strong>Cada capa solo se comunica con la de abajo o arriba.</strong></li>
+    <li><strong>Más ordenado y estructurado que el modelo monolítico.</strong></li>
+  </ul>
+  <p>El modelo por capas es un enfoque más estructurado y ordenado que el modelo monolítico. En este modelo, el sistema se divide en niveles (capas), cada uno con una función específica. Cada capa solo se comunica con la de abajo o arriba, lo que reduce la complejidad y mejora la seguridad.</p>
+  <p>El modelo por capas es más fácil de mantener y comprender que el modelo monolítico, pero puede ser más lento y tener un diseño más complejo.</p>
+  <p>En resumen, el modelo por capas es ordenado y estructurado.</p>
+</div>
+
+<div class="resumen-seccion">
+  <h2>🔴 3. MICROKERNEL</h2>
+  <strong>Conceptos clave:</strong>
+  <ul>
+    <li><strong>Dejar en el kernel solo lo esencial.</strong></li>
+    <li><strong>Los drivers, el sistema de archivos y los servicios se ejecutan como programas de usuario.</strong></li>
+    <li><strong>Más seguro y modular que el modelo por capas.</strong></li>
+  </ul>
+  <p>El modelo microkernel es un enfoque moderno que deja en el kernel solo lo esencial. Esto significa que los drivers, el sistema de archivos y los servicios se ejecutan como programas de usuario, lo que reduce la complejidad y mejora la seguridad.</p>
+  <p>El modelo microkernel es más seguro y modular que el modelo por capas, pero puede ser más lento debido a la comunicación entre procesos.</p>
+  <p>En resumen, el modelo microkernel es seguro pero con costo en rendimiento.</p>
+</div>
+
+<div class="resumen-seccion">
+  <h2>🔵 4. MODELO CLIENTE - SERVIDOR</h2>
+  <strong>Conceptos clave:</strong>
+  <ul>
+    <li><strong>Separar en clientes y servidores.</strong></li>
+    <li><strong>Los clientes piden servicios y los servidores los brindan.</strong></li>
+    <li><strong>Todo funciona como “pedido y respuesta”.</strong></li>
+  </ul>
+  <p>El modelo cliente-servidor es un enfoque que separa en clientes y servidores. Los clientes piden servicios y los servidores los brindan, lo que reduce la complejidad y mejora la seguridad.</p>
+  <p>Todo funciona como “pedido y respuesta”, lo que hace que el modelo cliente-servidor sea fácil de entender y mantener.</p>
+  <p>En resumen, el modelo cliente-servidor es todo funciona como “pedido y respuesta”.</p>
+</div>
+
+<div class="resumen-seccion">
+  <h2>🔵 5. MÁQUINAS VIRTUALES</h2>
+  <strong>Conceptos clave:</strong>
+  <ul>
+    <li><strong>Simular computadoras dentro de una computadora.</strong></li>
+    <li><strong>Ejecutar varios sistemas operativos.</strong></li>
+    <li><strong>Aislar procesos.</strong></li>
+  </ul>
+  <p>Las máquinas virtuales son un software que simula computadoras dentro de una computadora. Esto permite ejecutar varios sistemas operativos y aislar procesos, lo que reduce la complejidad y mejora la seguridad.</p>
+  <p>Las máquinas virtuales son muy útiles para probar cosas sin romper el sistema real.</p>
+  <p>En resumen, las máquinas virtuales son muy útiles para probar cosas sin romper el sistema real.</p>
+</div>
+
+<div class="resumen-seccion">
+  <h2>🎯 IDEA FINAL</h2>
+  <p>En resumen, cada modelo de sistema operativo tiene sus ventajas y desventajas. El modelo monolítico es rápido pero peligroso, el modelo por capas es ordenado y estructurado, el modelo microkernel es seguro pero con costo en rendimiento, el modelo cliente-servidor es todo funciona como “pedido y respuesta” y las máquinas virtuales son muy útiles para probar cosas sin romper el sistema real.</p>
+</div>
+
+<div class="resumen-seccion">
+  <h2>🧠 Preguntas de Repaso</h2>
+  <ol>
+    <li>¿Cuál es el modelo de sistema operativo más clásico?</li>
+    <li>¿Cuál es el problema clave del modelo monolítico?</li>
+    <li>¿Cuál es la ventaja clave del modelo microkernel?</li>
+    <li>¿Cuál es el propósito de las máquinas virtuales?</li>
+  </ol>
+</div>
+</div></body>
+</html>

@@ -1,8 +1,14 @@
 # config_manager.py
-import json, os
+import json, os, sys
 from base64 import b64encode, b64decode
 
-CONFIG_FILE = "config.json"
+def _get_base_dir() -> str:
+    """Carpeta donde vive el .exe o el .py — nunca _MEIPASS."""
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(sys.executable)
+    return os.path.dirname(os.path.abspath(__file__))
+
+CONFIG_FILE = os.path.join(_get_base_dir(), "config.json")
 
 def _ofuscar(texto: str) -> str:
     return b64encode(texto.encode()).decode()
@@ -15,21 +21,29 @@ def _deofuscar(texto: str) -> str:
 
 def _leer_version() -> str:
     try:
-        with open("version.txt") as f:
+        v = os.path.join(_get_base_dir(), "version.txt")
+        with open(v) as f:
             return f.read().strip()
     except FileNotFoundError:
         return "1.0.0"
 
 def guardar_config(url_campus: str, usuario: str, password: str, groq_key: str = ""):
+    if not url_campus or not usuario or not password:
+        raise ValueError("URL, usuario y contraseña son obligatorios.")
+
     data = {
-        "url_campus": url_campus.rstrip("/"),
-        "usuario":    usuario,
+        "url_campus": url_campus.strip().rstrip("/"),
+        "usuario":    usuario.strip(),
         "password":   _ofuscar(password),
-        "groq_key":   _ofuscar(groq_key) if groq_key else "",
+        "groq_key":   _ofuscar(groq_key.strip()) if groq_key and groq_key.strip() else "",
         "version":    _leer_version(),
     }
-    with open(CONFIG_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    try:
+        os.makedirs(os.path.dirname(CONFIG_FILE), exist_ok=True)
+        with open(CONFIG_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    except (IOError, OSError, PermissionError) as e:
+        raise RuntimeError(f"No se pudo escribir config.json en {CONFIG_FILE}: {e}")
 
 def cargar_config() -> dict | None:
     if not os.path.exists(CONFIG_FILE):
@@ -48,6 +62,5 @@ def config_completa() -> bool:
     return bool(c and c.get("url_campus") and c.get("usuario") and c.get("password"))
 
 def get_groq_key() -> str:
-    """Devuelve la key del usuario si existe, sino cadena vacía (app.py usa la suya)."""
     c = cargar_config()
     return c.get("groq_key", "") if c else ""

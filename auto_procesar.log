@@ -1,0 +1,1010 @@
+2026-04-08 00:50:45,815 [INFO] 🚀 Auto-procesador iniciado.
+2026-04-08 00:50:45,815 [INFO]    Base dir: C:\Users\Fran\Desktop\Plataforma_IES\Desarrollo
+2026-04-08 00:50:45,815 [INFO]    Programado: lunes y jueves a las 08:00
+2026-04-08 00:50:45,816 [INFO] ⚡ Ejecutando escaneo inicial…
+2026-04-08 00:50:45,816 [INFO] ============================================================
+2026-04-08 00:50:45,816 [INFO] 🔍 Iniciando escaneo de materias…
+2026-04-08 00:50:45,816 [INFO] 📂 Materia: Comunicacion (7 PDFs)
+2026-04-08 00:50:45,817 [INFO]   📄 Procesando: AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 00:50:47,773 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 00:52:12,211 [INFO] 🚀 Auto-procesador iniciado.
+2026-04-08 00:52:12,211 [INFO]    Base dir: C:\Users\Fran\Desktop\Plataforma_IES\Desarrollo
+2026-04-08 00:52:12,211 [INFO]    Programado: lunes y jueves a las 08:00
+2026-04-08 00:52:12,211 [INFO] ⚡ Ejecutando escaneo inicial…
+2026-04-08 00:52:12,211 [INFO] ============================================================
+2026-04-08 00:52:12,211 [INFO] 🔍 Iniciando escaneo de materias…
+2026-04-08 00:52:12,212 [INFO] 📂 Materia: Comunicacion (7 PDFs)
+2026-04-08 00:52:12,212 [INFO]   📄 Procesando: AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 00:52:14,184 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 00:52:15,304 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:15,305 [WARNING]   ⚠️  Gemini no devolvió contenido para AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 00:52:15,305 [INFO]   📄 Procesando: comunicacion no verbal.pdf
+2026-04-08 00:52:16,002 [INFO]   🤖 Enviando a Gemini (24 chars)…
+2026-04-08 00:52:16,217 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:16,217 [WARNING]   ⚠️  Gemini no devolvió contenido para comunicacion no verbal.pdf
+2026-04-08 00:52:16,218 [INFO]   📄 Procesando: Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 00:52:18,815 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 00:52:19,060 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:19,060 [WARNING]   ⚠️  Gemini no devolvió contenido para Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 00:52:19,061 [INFO]   📄 Procesando: García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 00:52:19,980 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 00:52:20,226 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:20,227 [WARNING]   ⚠️  Gemini no devolvió contenido para García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 00:52:20,227 [INFO]   📄 Procesando: Larousse Comunicación-Ortografía.pdf
+2026-04-08 00:52:21,120 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 00:52:21,372 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:21,372 [WARNING]   ⚠️  Gemini no devolvió contenido para Larousse Comunicación-Ortografía.pdf
+2026-04-08 00:52:21,372 [INFO]   📄 Procesando: MacDonald, R. - Las Funciones de Roman Jakobson en la era digital.pdf
+2026-04-08 00:52:25,325 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 00:52:25,568 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:25,568 [WARNING]   ⚠️  Gemini no devolvió contenido para MacDonald, R. - Las Funciones de Roman Jakobson en la era digital.pdf
+2026-04-08 00:52:25,568 [INFO]   📄 Procesando: REYES Graciela - Como Escribir Bien En Español.PDF
+2026-04-08 00:52:26,812 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 00:52:27,057 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:27,057 [WARNING]   ⚠️  Gemini no devolvió contenido para REYES Graciela - Como Escribir Bien En Español.PDF
+2026-04-08 00:52:27,058 [INFO] 📂 Materia: Ingenieria de Software (1 PDF)
+2026-04-08 00:52:27,058 [INFO]   📄 Procesando: apunte.pdf
+2026-04-08 00:52:27,259 [INFO]   🤖 Enviando a Gemini (1135 chars)…
+2026-04-08 00:52:27,799 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:27,799 [WARNING]   ⚠️  Gemini no devolvió contenido para apunte.pdf
+2026-04-08 00:52:27,799 [INFO] 📂 Materia: Ingles (1 PDF)
+2026-04-08 00:52:27,800 [INFO]   📄 Procesando: BOOKLET - DSW I -  2025.pdf
+2026-04-08 00:52:28,402 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 00:52:28,646 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:28,646 [WARNING]   ⚠️  Gemini no devolvió contenido para BOOKLET - DSW I -  2025.pdf
+2026-04-08 00:52:28,646 [INFO] 📂 Materia: Logica (1 PDF)
+2026-04-08 00:52:28,646 [INFO]   📄 Procesando: LÓGICA Y ESTRUCTURA DE DATOS - Intro a la Asignatura.pdf
+2026-04-08 00:52:28,742 [INFO]   🤖 Enviando a Gemini (1180 chars)…
+2026-04-08 00:52:29,343 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:29,344 [WARNING]   ⚠️  Gemini no devolvió contenido para LÓGICA Y ESTRUCTURA DE DATOS - Intro a la Asignatura.pdf
+2026-04-08 00:52:29,344 [INFO] 📂 Materia: Matematica (1 PDF)
+2026-04-08 00:52:29,344 [INFO]   📄 Procesando: precalculo_-_matematicas_para_el_calculo-1_Matrices.pdf
+2026-04-08 00:52:29,507 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,511 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,513 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,514 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,515 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,516 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,520 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,520 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,520 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,521 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,653 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,657 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,659 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,660 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,660 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,667 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,671 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,671 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,672 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,687 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,729 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,733 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,738 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,745 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,747 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,747 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,748 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,748 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,749 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,751 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,751 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,752 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,838 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,840 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,846 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,847 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,848 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,849 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,849 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,849 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,850 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,850 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,854 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,855 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,855 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,856 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,856 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,857 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,908 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,913 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,921 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,924 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,925 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,933 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,936 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,944 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,945 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,947 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,948 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,948 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:29,953 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,015 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,016 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,095 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,100 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,102 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,105 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,114 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,187 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,191 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,214 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,217 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,293 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,293 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,294 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,298 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,298 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,299 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,476 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,478 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,478 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,479 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,479 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,480 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,569 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,569 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,679 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,683 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,687 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,741 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,746 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,751 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,755 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,758 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,759 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,762 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,763 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,764 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,764 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,767 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,768 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,770 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,770 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,771 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,773 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,774 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,775 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,776 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,830 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,845 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,854 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,857 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,858 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,860 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,862 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 00:52:30,904 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 00:52:31,148 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:31,148 [WARNING]   ⚠️  Gemini no devolvió contenido para precalculo_-_matematicas_para_el_calculo-1_Matrices.pdf
+2026-04-08 00:52:31,149 [INFO] 📂 Materia: Sistemas Operativos (2 PDFs)
+2026-04-08 00:52:31,149 [INFO]   📄 Procesando: PLANIFICACION SISTEMAS OPERATIVOS -Profesor Kouefati jacques.pdf
+2026-04-08 00:52:31,519 [INFO]   🤖 Enviando a Gemini (6891 chars)…
+2026-04-08 00:52:31,863 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:31,863 [WARNING]   ⚠️  Gemini no devolvió contenido para PLANIFICACION SISTEMAS OPERATIVOS -Profesor Kouefati jacques.pdf
+2026-04-08 00:52:31,864 [INFO]   📄 Procesando: Unidad 1 Sis Op IES.pdf
+2026-04-08 00:52:33,093 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 00:52:33,332 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 00:52:33,333 [WARNING]   ⚠️  Gemini no devolvió contenido para Unidad 1 Sis Op IES.pdf
+2026-04-08 00:52:33,333 [INFO] ✅ Escaneo completo — 0 resúmenes generados, 13 errores.
+2026-04-08 00:52:33,333 [INFO] ============================================================
+2026-04-08 00:52:33,333 [INFO] ⏰ Scheduler activo. Presioná Ctrl+C para detener.
+2026-04-08 10:36:56,890 [INFO] 🚀 Auto-procesador iniciado.
+2026-04-08 10:36:56,891 [INFO]    Base dir: C:\Users\Fran\Desktop\Plataforma_IES\Desarrollo
+2026-04-08 10:36:56,891 [INFO]    Programado: lunes y jueves a las 08:00
+2026-04-08 10:36:56,891 [INFO] ⚡ Ejecutando escaneo inicial…
+2026-04-08 10:36:56,891 [INFO] ============================================================
+2026-04-08 10:36:56,891 [INFO] 🔍 Iniciando escaneo de materias…
+2026-04-08 10:36:56,892 [INFO] 📂 Materia: Comunicacion (7 PDFs)
+2026-04-08 10:36:56,892 [INFO]   📄 Procesando: AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 10:36:59,035 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:36:59,453 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:36:59,454 [WARNING]   ⚠️  Gemini no devolvió contenido para AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 10:36:59,454 [INFO]   📄 Procesando: comunicacion no verbal.pdf
+2026-04-08 10:37:00,180 [INFO]   🤖 Enviando a Gemini (24 chars)…
+2026-04-08 10:37:00,397 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:00,398 [WARNING]   ⚠️  Gemini no devolvió contenido para comunicacion no verbal.pdf
+2026-04-08 10:37:00,398 [INFO]   📄 Procesando: Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 10:37:03,004 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:37:03,255 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:03,255 [WARNING]   ⚠️  Gemini no devolvió contenido para Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 10:37:03,255 [INFO]   📄 Procesando: García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 10:37:04,479 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:37:04,724 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:04,724 [WARNING]   ⚠️  Gemini no devolvió contenido para García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 10:37:04,724 [INFO]   📄 Procesando: Larousse Comunicación-Ortografía.pdf
+2026-04-08 10:37:05,810 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:37:06,054 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:06,054 [WARNING]   ⚠️  Gemini no devolvió contenido para Larousse Comunicación-Ortografía.pdf
+2026-04-08 10:37:06,054 [INFO]   📄 Procesando: MacDonald, R. - Las Funciones de Roman Jakobson en la era digital.pdf
+2026-04-08 10:37:10,526 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:37:10,765 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:10,765 [WARNING]   ⚠️  Gemini no devolvió contenido para MacDonald, R. - Las Funciones de Roman Jakobson en la era digital.pdf
+2026-04-08 10:37:10,765 [INFO]   📄 Procesando: REYES Graciela - Como Escribir Bien En Español.PDF
+2026-04-08 10:37:12,804 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:37:13,054 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:13,054 [WARNING]   ⚠️  Gemini no devolvió contenido para REYES Graciela - Como Escribir Bien En Español.PDF
+2026-04-08 10:37:13,055 [INFO] 📂 Materia: Ingenieria de Software (1 PDF)
+2026-04-08 10:37:13,055 [INFO]   📄 Procesando: apunte.pdf
+2026-04-08 10:37:13,305 [INFO]   🤖 Enviando a Gemini (1135 chars)…
+2026-04-08 10:37:13,738 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:13,739 [WARNING]   ⚠️  Gemini no devolvió contenido para apunte.pdf
+2026-04-08 10:37:13,739 [INFO] 📂 Materia: Ingles (1 PDF)
+2026-04-08 10:37:13,739 [INFO]   📄 Procesando: BOOKLET - DSW I -  2025.pdf
+2026-04-08 10:37:14,727 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:37:14,967 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:14,967 [WARNING]   ⚠️  Gemini no devolvió contenido para BOOKLET - DSW I -  2025.pdf
+2026-04-08 10:37:14,968 [INFO] 📂 Materia: Logica (1 PDF)
+2026-04-08 10:37:14,968 [INFO]   📄 Procesando: LÓGICA Y ESTRUCTURA DE DATOS - Intro a la Asignatura.pdf
+2026-04-08 10:37:15,083 [INFO]   🤖 Enviando a Gemini (1180 chars)…
+2026-04-08 10:37:15,662 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:15,662 [WARNING]   ⚠️  Gemini no devolvió contenido para LÓGICA Y ESTRUCTURA DE DATOS - Intro a la Asignatura.pdf
+2026-04-08 10:37:15,662 [INFO] 📂 Materia: Matematica (1 PDF)
+2026-04-08 10:37:15,663 [INFO]   📄 Procesando: precalculo_-_matematicas_para_el_calculo-1_Matrices.pdf
+2026-04-08 10:37:15,858 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:15,862 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:15,867 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:15,868 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:15,869 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:15,870 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:15,874 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:15,875 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:15,875 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:15,876 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,048 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,053 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,056 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,057 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,057 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,066 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,071 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,072 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,072 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,088 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,147 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,151 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,158 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,167 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,169 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,170 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,171 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,172 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,173 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,176 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,176 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,176 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,273 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,276 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,281 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,282 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,283 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,284 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,284 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,285 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,285 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,286 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,290 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,291 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,292 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,292 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,293 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,293 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,357 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,361 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,370 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,374 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,375 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,386 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,390 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,398 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,399 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,401 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,402 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,403 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,408 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,472 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,474 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,556 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,562 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,565 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,568 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,576 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,642 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,646 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,676 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,679 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,768 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,768 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,769 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,773 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,774 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,774 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,978 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,980 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,980 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,981 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,982 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:16,982 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,089 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,090 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,209 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,215 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,218 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,287 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,293 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,297 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,302 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,306 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,307 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,311 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,312 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,313 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,314 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,316 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,319 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,320 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,321 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,322 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,323 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,325 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,326 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,329 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,389 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,413 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,424 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,427 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,428 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,431 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,433 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:37:17,477 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:37:17,728 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:17,728 [WARNING]   ⚠️  Gemini no devolvió contenido para precalculo_-_matematicas_para_el_calculo-1_Matrices.pdf
+2026-04-08 10:37:17,729 [INFO] 📂 Materia: Sistemas Operativos (2 PDFs)
+2026-04-08 10:37:17,729 [INFO]   📄 Procesando: PLANIFICACION SISTEMAS OPERATIVOS -Profesor Kouefati jacques.pdf
+2026-04-08 10:37:18,114 [INFO]   🤖 Enviando a Gemini (6891 chars)…
+2026-04-08 10:37:18,437 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:18,437 [WARNING]   ⚠️  Gemini no devolvió contenido para PLANIFICACION SISTEMAS OPERATIVOS -Profesor Kouefati jacques.pdf
+2026-04-08 10:37:18,438 [INFO]   📄 Procesando: Unidad 1 Sis Op IES.pdf
+2026-04-08 10:37:20,049 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:37:20,301 [ERROR]   Error llamando a Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:37:20,302 [WARNING]   ⚠️  Gemini no devolvió contenido para Unidad 1 Sis Op IES.pdf
+2026-04-08 10:37:20,302 [INFO] ✅ Escaneo completo — 0 resúmenes generados, 13 errores.
+2026-04-08 10:37:20,302 [INFO] ============================================================
+2026-04-08 10:37:20,302 [INFO] ⏰ Scheduler activo. Presioná Ctrl+C para detener.
+2026-04-08 10:40:43,716 [INFO] 🛑 Auto-procesador detenido manualmente.
+2026-04-08 10:41:27,260 [INFO] 🚀 Auto-procesador iniciado.
+2026-04-08 10:41:27,260 [INFO]    Base dir: C:\Users\Fran\Desktop\Plataforma_IES\Desarrollo
+2026-04-08 10:41:27,260 [INFO]    Programado: lunes y jueves a las 08:00
+2026-04-08 10:41:27,260 [INFO] ⚡ Ejecutando escaneo inicial…
+2026-04-08 10:41:27,260 [INFO] ============================================================
+2026-04-08 10:41:27,261 [INFO] 🔍 Iniciando escaneo de materias…
+2026-04-08 10:41:27,261 [INFO] 📂 Materia: Comunicacion (7 PDFs)
+2026-04-08 10:41:27,261 [INFO]   📄 Procesando: AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 10:41:29,263 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:41:29,620 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:29,620 [WARNING]   ⚠️  Gemini no devolvió contenido para AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 10:41:29,621 [INFO]   📄 Procesando: comunicacion no verbal.pdf
+2026-04-08 10:41:30,310 [INFO]   🤖 Enviando a Gemini (24 chars)…
+2026-04-08 10:41:30,509 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:30,509 [WARNING]   ⚠️  Gemini no devolvió contenido para comunicacion no verbal.pdf
+2026-04-08 10:41:30,510 [INFO]   📄 Procesando: Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 10:41:33,121 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:41:33,362 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:33,362 [WARNING]   ⚠️  Gemini no devolvió contenido para Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 10:41:33,363 [INFO]   📄 Procesando: García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 10:41:34,303 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:41:34,551 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:34,552 [WARNING]   ⚠️  Gemini no devolvió contenido para García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 10:41:34,552 [INFO]   📄 Procesando: Larousse Comunicación-Ortografía.pdf
+2026-04-08 10:41:35,493 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:41:35,737 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:35,738 [WARNING]   ⚠️  Gemini no devolvió contenido para Larousse Comunicación-Ortografía.pdf
+2026-04-08 10:41:35,738 [INFO]   📄 Procesando: MacDonald, R. - Las Funciones de Roman Jakobson en la era digital.pdf
+2026-04-08 10:41:39,658 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:41:39,900 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:39,901 [WARNING]   ⚠️  Gemini no devolvió contenido para MacDonald, R. - Las Funciones de Roman Jakobson en la era digital.pdf
+2026-04-08 10:41:39,901 [INFO]   📄 Procesando: REYES Graciela - Como Escribir Bien En Español.PDF
+2026-04-08 10:41:41,120 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:41:41,361 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:41,361 [WARNING]   ⚠️  Gemini no devolvió contenido para REYES Graciela - Como Escribir Bien En Español.PDF
+2026-04-08 10:41:41,362 [INFO] 📂 Materia: Ingenieria de Software (1 PDF)
+2026-04-08 10:41:41,362 [INFO]   📄 Procesando: apunte.pdf
+2026-04-08 10:41:41,544 [INFO]   🤖 Enviando a Gemini (1135 chars)…
+2026-04-08 10:41:42,047 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:42,047 [WARNING]   ⚠️  Gemini no devolvió contenido para apunte.pdf
+2026-04-08 10:41:42,047 [INFO] 📂 Materia: Ingles (1 PDF)
+2026-04-08 10:41:42,047 [INFO]   📄 Procesando: BOOKLET - DSW I -  2025.pdf
+2026-04-08 10:41:42,641 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:41:42,881 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:42,881 [WARNING]   ⚠️  Gemini no devolvió contenido para BOOKLET - DSW I -  2025.pdf
+2026-04-08 10:41:42,881 [INFO] 📂 Materia: Logica (1 PDF)
+2026-04-08 10:41:42,882 [INFO]   📄 Procesando: LÓGICA Y ESTRUCTURA DE DATOS - Intro a la Asignatura.pdf
+2026-04-08 10:41:42,969 [INFO]   🤖 Enviando a Gemini (1180 chars)…
+2026-04-08 10:41:43,599 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:43,599 [WARNING]   ⚠️  Gemini no devolvió contenido para LÓGICA Y ESTRUCTURA DE DATOS - Intro a la Asignatura.pdf
+2026-04-08 10:41:43,599 [INFO] 📂 Materia: Matematica (1 PDF)
+2026-04-08 10:41:43,599 [INFO]   📄 Procesando: precalculo_-_matematicas_para_el_calculo-1_Matrices.pdf
+2026-04-08 10:41:43,758 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,763 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,766 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,767 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,768 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,769 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,776 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,777 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,777 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,778 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,912 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,916 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,918 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,919 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,920 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,927 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,931 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,931 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,932 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,945 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,987 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,992 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:43,997 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,003 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,005 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,006 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,006 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,007 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,008 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,010 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,011 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,011 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,095 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,098 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,104 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,105 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,106 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,107 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,107 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,108 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,108 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,108 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,112 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,113 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,114 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,114 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,115 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,115 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,165 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,168 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,176 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,180 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,181 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,189 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,192 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,200 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,200 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,203 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,204 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,204 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,209 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,269 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,270 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,348 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,352 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,354 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,358 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,366 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,428 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,432 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,453 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,456 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,530 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,531 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,531 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,536 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,536 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,537 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,715 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,717 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,718 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,718 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,719 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,720 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,809 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,810 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,917 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,921 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,924 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,976 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,981 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,986 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,991 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,994 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,995 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,998 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:44,999 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,000 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,001 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,003 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,005 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,007 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,007 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,008 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,010 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,011 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,012 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,014 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,064 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,079 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,088 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,091 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,091 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,094 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,096 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:41:45,136 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:41:45,376 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:45,376 [WARNING]   ⚠️  Gemini no devolvió contenido para precalculo_-_matematicas_para_el_calculo-1_Matrices.pdf
+2026-04-08 10:41:45,377 [INFO] 📂 Materia: Sistemas Operativos (2 PDFs)
+2026-04-08 10:41:45,377 [INFO]   📄 Procesando: PLANIFICACION SISTEMAS OPERATIVOS -Profesor Kouefati jacques.pdf
+2026-04-08 10:41:45,661 [INFO]   🤖 Enviando a Gemini (6891 chars)…
+2026-04-08 10:41:46,103 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:46,103 [WARNING]   ⚠️  Gemini no devolvió contenido para PLANIFICACION SISTEMAS OPERATIVOS -Profesor Kouefati jacques.pdf
+2026-04-08 10:41:46,103 [INFO]   📄 Procesando: Unidad 1 Sis Op IES.pdf
+2026-04-08 10:41:47,334 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:41:47,568 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:41:47,569 [WARNING]   ⚠️  Gemini no devolvió contenido para Unidad 1 Sis Op IES.pdf
+2026-04-08 10:41:47,569 [INFO] ✅ Escaneo completo — 0 resúmenes generados, 13 errores.
+2026-04-08 10:41:47,569 [INFO] ============================================================
+2026-04-08 10:41:47,570 [INFO] ⏰ Scheduler activo. Presioná Ctrl+C para detener.
+2026-04-08 10:49:49,431 [INFO] 🛑 Auto-procesador detenido manualmente.
+2026-04-08 10:51:02,856 [INFO] 🚀 Auto-procesador iniciado.
+2026-04-08 10:51:02,856 [INFO]    Base dir: C:\Users\Fran\Desktop\Plataforma_IES\Desarrollo
+2026-04-08 10:51:02,856 [INFO]    Programado: lunes y jueves a las 08:00
+2026-04-08 10:51:02,856 [INFO] ⚡ Ejecutando escaneo inicial…
+2026-04-08 10:51:02,856 [INFO] ============================================================
+2026-04-08 10:51:02,856 [INFO] 🔍 Iniciando escaneo de materias…
+2026-04-08 10:51:02,857 [INFO] 📂 Materia: Comunicacion (7 PDFs)
+2026-04-08 10:51:02,857 [INFO]   📄 Procesando: AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 10:51:04,903 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:51:06,017 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:06,017 [WARNING]   ⚠️  Gemini no devolvió contenido para AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 10:51:06,017 [INFO]   📄 Procesando: comunicacion no verbal.pdf
+2026-04-08 10:51:06,695 [INFO]   🤖 Enviando a Gemini (24 chars)…
+2026-04-08 10:51:06,905 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:06,905 [WARNING]   ⚠️  Gemini no devolvió contenido para comunicacion no verbal.pdf
+2026-04-08 10:51:06,906 [INFO]   📄 Procesando: Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 10:51:09,427 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:51:09,671 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:09,671 [WARNING]   ⚠️  Gemini no devolvió contenido para Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 10:51:09,671 [INFO]   📄 Procesando: García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 10:51:10,586 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:51:10,832 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:10,832 [WARNING]   ⚠️  Gemini no devolvió contenido para García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 10:51:10,833 [INFO]   📄 Procesando: Larousse Comunicación-Ortografía.pdf
+2026-04-08 10:51:11,721 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:51:11,966 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:11,966 [WARNING]   ⚠️  Gemini no devolvió contenido para Larousse Comunicación-Ortografía.pdf
+2026-04-08 10:51:11,966 [INFO]   📄 Procesando: MacDonald, R. - Las Funciones de Roman Jakobson en la era digital.pdf
+2026-04-08 10:51:16,123 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:51:16,364 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:16,365 [WARNING]   ⚠️  Gemini no devolvió contenido para MacDonald, R. - Las Funciones de Roman Jakobson en la era digital.pdf
+2026-04-08 10:51:16,365 [INFO]   📄 Procesando: REYES Graciela - Como Escribir Bien En Español.PDF
+2026-04-08 10:51:17,653 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:51:17,897 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:17,898 [WARNING]   ⚠️  Gemini no devolvió contenido para REYES Graciela - Como Escribir Bien En Español.PDF
+2026-04-08 10:51:17,898 [INFO] 📂 Materia: Ingenieria de Software (1 PDF)
+2026-04-08 10:51:17,898 [INFO]   📄 Procesando: apunte.pdf
+2026-04-08 10:51:18,090 [INFO]   🤖 Enviando a Gemini (1135 chars)…
+2026-04-08 10:51:18,604 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:18,604 [WARNING]   ⚠️  Gemini no devolvió contenido para apunte.pdf
+2026-04-08 10:51:18,604 [INFO] 📂 Materia: Ingles (1 PDF)
+2026-04-08 10:51:18,605 [INFO]   📄 Procesando: BOOKLET - DSW I -  2025.pdf
+2026-04-08 10:51:19,216 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:51:19,447 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:19,448 [WARNING]   ⚠️  Gemini no devolvió contenido para BOOKLET - DSW I -  2025.pdf
+2026-04-08 10:51:19,448 [INFO] 📂 Materia: Logica (1 PDF)
+2026-04-08 10:51:19,448 [INFO]   📄 Procesando: LÓGICA Y ESTRUCTURA DE DATOS - Intro a la Asignatura.pdf
+2026-04-08 10:51:19,540 [INFO]   🤖 Enviando a Gemini (1180 chars)…
+2026-04-08 10:51:20,160 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:20,160 [WARNING]   ⚠️  Gemini no devolvió contenido para LÓGICA Y ESTRUCTURA DE DATOS - Intro a la Asignatura.pdf
+2026-04-08 10:51:20,161 [INFO] 📂 Materia: Matematica (1 PDF)
+2026-04-08 10:51:20,161 [INFO]   📄 Procesando: precalculo_-_matematicas_para_el_calculo-1_Matrices.pdf
+2026-04-08 10:51:20,310 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,314 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,317 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,318 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,319 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,319 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,324 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,324 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,324 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,325 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,444 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,448 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,450 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,450 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,451 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,458 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,462 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,462 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,462 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,475 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,517 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,521 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,527 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,534 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,535 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,536 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,536 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,537 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,538 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,540 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,540 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,540 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,625 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,627 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,633 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,634 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,635 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,635 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,636 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,636 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,636 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,637 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,641 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,642 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,642 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,643 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,643 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,643 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,694 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,698 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,705 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,709 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,710 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,718 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,721 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,728 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,728 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,730 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,731 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,731 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,736 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,797 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,798 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,873 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,878 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,880 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,883 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,891 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,954 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,958 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,980 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:20,982 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,060 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,060 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,061 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,065 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,065 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,066 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,248 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,249 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,250 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,251 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,251 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,252 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,344 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,345 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,453 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,457 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,460 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,514 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,519 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,524 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,528 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,531 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,532 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,535 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,537 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,537 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,538 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,540 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,542 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,544 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,544 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,545 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,547 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,548 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,549 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,550 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,602 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,616 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,626 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,628 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,629 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,632 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,633 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 10:51:21,674 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:51:21,911 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:21,911 [WARNING]   ⚠️  Gemini no devolvió contenido para precalculo_-_matematicas_para_el_calculo-1_Matrices.pdf
+2026-04-08 10:51:21,912 [INFO] 📂 Materia: Sistemas Operativos (2 PDFs)
+2026-04-08 10:51:21,912 [INFO]   📄 Procesando: PLANIFICACION SISTEMAS OPERATIVOS -Profesor Kouefati jacques.pdf
+2026-04-08 10:51:22,198 [INFO]   🤖 Enviando a Gemini (6891 chars)…
+2026-04-08 10:51:22,624 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:22,624 [WARNING]   ⚠️  Gemini no devolvió contenido para PLANIFICACION SISTEMAS OPERATIVOS -Profesor Kouefati jacques.pdf
+2026-04-08 10:51:22,624 [INFO]   📄 Procesando: Unidad 1 Sis Op IES.pdf
+2026-04-08 10:51:23,851 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 10:51:24,089 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 10:51:24,090 [WARNING]   ⚠️  Gemini no devolvió contenido para Unidad 1 Sis Op IES.pdf
+2026-04-08 10:51:24,090 [INFO] ✅ Escaneo completo — 0 resúmenes generados, 13 errores.
+2026-04-08 10:51:24,090 [INFO] ============================================================
+2026-04-08 10:51:24,090 [INFO] ⏰ Scheduler activo. Presioná Ctrl+C para detener.
+2026-04-08 10:57:28,866 [INFO] 🛑 Auto-procesador detenido manualmente.
+2026-04-08 11:01:45,323 [INFO] 🚀 Auto-procesador iniciado.
+2026-04-08 11:01:45,323 [INFO]    Base dir: c:\Users\Fran\Desktop\Plataforma_IES\Desarrollo
+2026-04-08 11:01:45,323 [INFO]    Programado: lunes y jueves a las 08:00
+2026-04-08 11:01:45,323 [INFO] ⚡ Ejecutando escaneo inicial…
+2026-04-08 11:01:45,323 [INFO] ============================================================
+2026-04-08 11:01:45,323 [INFO] 🔍 Iniciando escaneo de materias…
+2026-04-08 11:01:45,324 [INFO] 📂 Materia: Comunicacion (7 PDFs)
+2026-04-08 11:01:45,324 [INFO]   📄 Procesando: AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 11:01:47,305 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 11:01:48,387 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 11:01:48,387 [WARNING]   ⚠️  Gemini no devolvió contenido para AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 11:01:48,387 [INFO]   📄 Procesando: comunicacion no verbal.pdf
+2026-04-08 11:01:49,074 [INFO]   🤖 Enviando a Gemini (24 chars)…
+2026-04-08 11:01:49,285 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 11:01:49,286 [WARNING]   ⚠️  Gemini no devolvió contenido para comunicacion no verbal.pdf
+2026-04-08 11:01:49,286 [INFO]   📄 Procesando: Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 11:01:51,894 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 11:01:52,140 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 11:01:52,140 [WARNING]   ⚠️  Gemini no devolvió contenido para Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 11:01:52,140 [INFO]   📄 Procesando: García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 11:01:53,055 [INFO]   🤖 Enviando a Gemini (8000 chars)…
+2026-04-08 11:01:53,302 [ERROR]   Error llamando a Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-04-08 11:01:53,302 [WARNING]   ⚠️  Gemini no devolvió contenido para García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 11:01:53,303 [INFO]   📄 Procesando: Larousse Comunicación-Ortografía.pdf
+2026-04-08 11:20:23,910 [INFO] 🚀 Auto-procesador iniciado.
+2026-04-08 11:20:24,869 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:20:24,869 [WARNING]   ↳ llama3-8b-8192: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is n
+2026-04-08 11:20:24,940 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:20:24,941 [WARNING]   ↳ llama3-70b-8192: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is 
+2026-04-08 11:20:25,017 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:20:25,017 [WARNING]   ↳ mixtral-8x7b-32768: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and 
+2026-04-08 11:20:25,084 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:20:25,085 [WARNING]   ↳ gemma2-9b-it: Error code: 400 - {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no 
+2026-04-08 11:20:25,320 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:20:25,333 [INFO] ✅ Groq listo: llama-3.1-8b-instant
+2026-04-08 11:20:25,333 [INFO] ⚡ Escaneo inicial…
+2026-04-08 11:20:25,333 [INFO] ============================================================
+2026-04-08 11:20:25,333 [INFO] 🔍 Iniciando escaneo con Groq (llama-3.1-8b-instant)…
+2026-04-08 11:20:25,334 [INFO] 📂 Comunicacion (7 PDFs)
+2026-04-08 11:20:25,334 [INFO]   📄 Procesando: AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 11:20:27,401 [INFO]   🤖 Enviando a Gemini (6000 chars)…
+2026-04-08 11:26:31,643 [INFO] 🚀 Auto-procesador iniciado.
+2026-04-08 11:26:32,438 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:26:32,438 [WARNING]   ↳ llama3-8b-8192: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is n
+2026-04-08 11:26:32,502 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:26:32,503 [WARNING]   ↳ llama3-70b-8192: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is 
+2026-04-08 11:26:32,570 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:26:32,571 [WARNING]   ↳ mixtral-8x7b-32768: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and 
+2026-04-08 11:26:32,637 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:26:32,638 [WARNING]   ↳ gemma2-9b-it: Error code: 400 - {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no 
+2026-04-08 11:26:32,856 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:26:32,864 [INFO] ✅ Groq listo: llama-3.1-8b-instant
+2026-04-08 11:26:32,864 [INFO] ⚡ Escaneo inicial…
+2026-04-08 11:26:32,864 [INFO] ============================================================
+2026-04-08 11:26:32,864 [INFO] 🔍 Iniciando escaneo con Groq (llama-3.1-8b-instant)…
+2026-04-08 11:26:32,865 [INFO] 📂 Comunicacion (7 PDFs)
+2026-04-08 11:26:32,865 [INFO]   📄 Procesando: AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 11:26:34,848 [INFO]   🤖 Enviando a Gemini (6000 chars)…
+2026-04-08 11:31:26,360 [INFO] 🚀 Auto-procesador iniciado.
+2026-04-08 11:31:27,103 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:31:27,104 [WARNING]   ↳ llama3-8b-8192: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is n
+2026-04-08 11:31:27,177 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:31:27,178 [WARNING]   ↳ llama3-70b-8192: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is 
+2026-04-08 11:31:27,248 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:31:27,248 [WARNING]   ↳ mixtral-8x7b-32768: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and 
+2026-04-08 11:31:27,310 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-08 11:31:27,311 [WARNING]   ↳ gemma2-9b-it: Error code: 400 - {'error': {'message': 'The model `gemma2-9b-it` has been decommissioned and is no 
+2026-04-08 11:31:27,897 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:31:27,905 [INFO] ✅ Groq listo: llama-3.1-8b-instant
+2026-04-08 11:31:27,905 [INFO] ⚡ Escaneo inicial…
+2026-04-08 11:31:27,906 [INFO] ============================================================
+2026-04-08 11:31:27,906 [INFO] 🔍 Iniciando escaneo con Groq (llama-3.1-8b-instant)…
+2026-04-08 11:31:27,906 [INFO] 📂 Comunicacion (7 PDFs)
+2026-04-08 11:31:27,907 [INFO]   📄 Procesando: AGUADO - introuccion a las teorias de la informacion y la comunicacion-.pdf
+2026-04-08 11:31:29,880 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (6000 chars)…
+2026-04-08 11:31:31,259 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:31:31,260 [INFO]   💾 Guardado: AGUADO_-_introuccion_a_las_teorias_de_la_informacion_y_la_comunicacion-_resumen.html
+2026-04-08 11:31:35,261 [INFO]   📄 Procesando: comunicacion no verbal.pdf
+2026-04-08 11:31:35,960 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (24 chars)…
+2026-04-08 11:31:36,861 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:31:36,862 [INFO]   💾 Guardado: comunicacion_no_verbal_resumen.html
+2026-04-08 11:31:40,863 [INFO]   📄 Procesando: Fonseca et al. - Comunicacion oral y escrita.pdf
+2026-04-08 11:31:43,341 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (6000 chars)…
+2026-04-08 11:31:44,850 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:31:44,852 [INFO]   💾 Guardado: Fonseca_et_al__-_Comunicacion_oral_y_escrita_resumen.html
+2026-04-08 11:31:48,852 [INFO]   📄 Procesando: García Negroni, M. M. - Escribir en Español. Claves para una corrección de estilo.pdf
+2026-04-08 11:31:49,764 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (6000 chars)…
+2026-04-08 11:31:49,841 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:31:49,842 [INFO] Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2026-04-08 11:32:08,235 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:32:08,237 [INFO]   💾 Guardado: García_Negroni__M__M__-_Escribir_en_Español__Claves_para_una_corrección_de_estilo_resumen.html
+2026-04-08 11:32:12,237 [INFO]   📄 Procesando: Larousse Comunicación-Ortografía.pdf
+2026-04-08 11:32:13,160 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (6000 chars)…
+2026-04-08 11:32:13,237 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:32:13,237 [INFO] Retrying request to /openai/v1/chat/completions in 44.000000 seconds
+2026-04-08 11:32:58,674 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:32:58,676 [INFO]   💾 Guardado: Larousse_Comunicación-Ortografía_resumen.html
+2026-04-08 11:33:02,677 [INFO]   📄 Procesando: MacDonald, R. - Las Funciones de Roman Jakobson en la era digital.pdf
+2026-04-08 11:33:06,953 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (6000 chars)…
+2026-04-08 11:33:07,128 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:33:07,129 [INFO] Retrying request to /openai/v1/chat/completions in 20.000000 seconds
+2026-04-08 11:33:27,275 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:33:27,275 [INFO] Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-04-08 11:33:29,582 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:33:29,583 [INFO]   💾 Guardado: MacDonald__R__-_Las_Funciones_de_Roman_Jakobson_en_la_era_digital_resumen.html
+2026-04-08 11:33:33,584 [INFO]   📄 Procesando: REYES Graciela - Como Escribir Bien En Español.PDF
+2026-04-08 11:33:34,897 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (6000 chars)…
+2026-04-08 11:33:35,034 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:33:35,034 [INFO] Retrying request to /openai/v1/chat/completions in 27.000000 seconds
+2026-04-08 11:34:03,891 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:34:03,893 [INFO]   💾 Guardado: REYES_Graciela_-_Como_Escribir_Bien_En_Español_resumen.html
+2026-04-08 11:34:07,893 [INFO] 📂 Ingenieria de Software (1 PDFs)
+2026-04-08 11:34:07,894 [INFO]   📄 Procesando: apunte.pdf
+2026-04-08 11:34:08,081 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (1135 chars)…
+2026-04-08 11:34:08,155 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:34:08,156 [INFO] Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2026-04-08 11:34:25,177 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:34:25,178 [INFO]   💾 Guardado: apunte_resumen.html
+2026-04-08 11:34:29,179 [INFO] 📂 Ingles (1 PDFs)
+2026-04-08 11:34:29,179 [INFO]   📄 Procesando: BOOKLET - DSW I -  2025.pdf
+2026-04-08 11:34:29,828 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (6000 chars)…
+2026-04-08 11:34:29,900 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:34:29,900 [INFO] Retrying request to /openai/v1/chat/completions in 10.000000 seconds
+2026-04-08 11:34:41,062 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:34:41,063 [INFO]   💾 Guardado: BOOKLET_-_DSW_I_-__2025_resumen.html
+2026-04-08 11:34:45,064 [INFO] 📂 Logica (1 PDFs)
+2026-04-08 11:34:45,064 [INFO]   📄 Procesando: LÓGICA Y ESTRUCTURA DE DATOS - Intro a la Asignatura.pdf
+2026-04-08 11:34:45,156 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (1180 chars)…
+2026-04-08 11:34:45,228 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:34:45,228 [INFO] Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-04-08 11:34:53,830 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:34:53,832 [INFO]   💾 Guardado: LÓGICA_Y_ESTRUCTURA_DE_DATOS_-_Intro_a_la_Asignatura_resumen.html
+2026-04-08 11:34:57,832 [INFO] 📂 Matematica (1 PDFs)
+2026-04-08 11:34:57,833 [INFO]   📄 Procesando: precalculo_-_matematicas_para_el_calculo-1_Matrices.pdf
+2026-04-08 11:34:58,044 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,049 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,051 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,052 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,053 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,054 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,058 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,059 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,059 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,060 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,127 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,131 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,133 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,133 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,134 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,141 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,145 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,145 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,145 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,159 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,200 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,205 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,210 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,216 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,218 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,218 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,219 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,220 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,221 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,223 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,223 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,223 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,319 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,322 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,328 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,329 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,330 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,331 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,331 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,332 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,332 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,332 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,336 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,337 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,338 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,338 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,339 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,339 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,381 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,385 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,393 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,397 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,398 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,406 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,410 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,417 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,417 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,419 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,421 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,421 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,426 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,485 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,486 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,559 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,563 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,565 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,568 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,576 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,635 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,639 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,652 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,654 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,730 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,730 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,731 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,735 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,736 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,737 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,933 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,934 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,935 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,936 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,936 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:58,937 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,044 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,045 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,173 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,178 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,182 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,244 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,249 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,254 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,258 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,263 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,264 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,267 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,268 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,269 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,270 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,272 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,274 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,276 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,277 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,278 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,279 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,281 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,282 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,283 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,326 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,341 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,351 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,354 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,355 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,358 [WARNING] Cannot set stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,360 [WARNING] Cannot set non-stroke color: 2 components specified, but only 1 (grayscale), 3 (RGB), and 4 (CMYK) are supported
+2026-04-08 11:34:59,403 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (6000 chars)…
+2026-04-08 11:34:59,541 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:34:59,542 [INFO] Retrying request to /openai/v1/chat/completions in 25.000000 seconds
+2026-04-08 11:35:26,005 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:35:26,006 [INFO]   💾 Guardado: precalculo_-_matematicas_para_el_calculo-1_Matrices_resumen.html
+2026-04-08 11:35:30,007 [INFO] 📂 Sistemas Operativos (2 PDFs)
+2026-04-08 11:35:30,007 [INFO]   📄 Procesando: PLANIFICACION SISTEMAS OPERATIVOS -Profesor Kouefati jacques.pdf
+2026-04-08 11:35:30,267 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (6000 chars)…
+2026-04-08 11:35:30,335 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:35:30,336 [INFO] Retrying request to /openai/v1/chat/completions in 25.000000 seconds
+2026-04-08 11:35:56,726 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:35:56,727 [INFO]   💾 Guardado: PLANIFICACION_SISTEMAS_OPERATIVOS_-Profesor_Kouefati_jacques_resumen.html
+2026-04-08 11:36:00,728 [INFO]   📄 Procesando: Unidad 1 Sis Op IES.pdf
+2026-04-08 11:36:01,861 [INFO]   🤖 Enviando a Groq/llama-3.1-8b-instant (6000 chars)…
+2026-04-08 11:36:02,011 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-08 11:36:02,012 [INFO] Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2026-04-08 11:36:22,223 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 11:36:22,224 [INFO]   💾 Guardado: Unidad_1_Sis_Op_IES_resumen.html
+2026-04-08 11:36:26,225 [INFO] ✅ Fin — 13 generados, 0 errores.
+2026-04-08 11:36:26,225 [INFO] ============================================================
+2026-04-08 11:36:26,225 [INFO] Modo --once: terminando.
