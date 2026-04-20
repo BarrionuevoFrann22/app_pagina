@@ -21,8 +21,12 @@ def _deofuscar(texto: str) -> str:
 
 def _leer_version() -> str:
     try:
-        v = os.path.join(_get_base_dir(), "version.txt")
-        with open(v) as f:
+        # Cuando está frozen, version.txt vive dentro del bundle (_MEIPASS)
+        if getattr(sys, 'frozen', False):
+            base = sys._MEIPASS
+        else:
+            base = os.path.dirname(os.path.abspath(__file__))
+        with open(os.path.join(base, "version.txt")) as f:
             return f.read().strip()
     except FileNotFoundError:
         return "1.0.0"
